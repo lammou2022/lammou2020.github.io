@@ -1,24 +1,62 @@
-# lammou2020.github.io
+# 網頁應用初級設計
 
-最近思想回顧，學習程式設計這門課的時候，理論算法不錯多。自己實作技能方面，對軟件技術趋向，完全沒有慧根!姓馬,姓碼就是不一樣!
+lammou2020.github.io
 
-作為每天下地垦作的碼農，對初學者分享個人想法。就像又苦又黑老農，跟你講莊稼如果默默耕耘。先立大綱，再補充說明。
+
+## 前言
+自我介紹，每天垦作的碼農，我的同學都不凡，我是最平凡一個人。每個人都須要有個名片，那我寫一些技能總結，同身邊同事分享。
+
+回顧，學習程式設計這門課的時候，理論算法很多。導師還是提供了實戰機會，數學基礎，職業技能，軟件技術趋向，前沿性，當時沒懂。
+
+以下介紹快速入門的技能，主要網頁應用。有了大綱，之后再補充說明。
 
 ## Web 前端
-HTML5 CSS JS(jQuery, Bootstrap) 
 
-## 程式 Nodejs 和 Python 易學易用
+HTML5 CSS3 JS(jQuery, jQueryUI, Bootstrap) 
+### HTML5
 
-網站應用 Express(Nodejs) 或 Flask(python)
+### CSS3
 
-## 未來性Go/Rust有餘力可以努力
+### JavaScript
 
-C C++ .net Java 。 Go/Rust更具未來性。
+### jQuery,jQuery
 
-## Python科學套件Numpy,Scipy,pandas,Sympy,Request,selium.
+### Bootstrap
+
+## Python 易學易用
+
+## Flask是Python網站應用框架。
+
+## 資料庫MySQL,SQLite,Redis
+
+## Python ORM資料庫操作
+
+## Python套件
+```
+Requests 
+Untangle
+BeautifulSoup4
+Selenium	
+Numpy 
+Pandas
+MatPlotLib
+python-docx,
+openpyxl
+Scipy
+Sympy
+```
+### 未來程式比較
+
+易用性,還有Node。 我也用Express(Node),作為Web應用框架 。   
+C ,C++, .net, Java。 Go/Rust更具未來性。     
+未來性Go/Rust，有餘力可以努力加油!  
+
+## 總結
+
+以上是我用Web前端和Python后端到技能，還有實作往后同大家分享!
 
 # 日誌
-## 前端工具 Webpack 學習 20211231
+## 2021-12-31 前端工具 Webpack 
 (QuickStart)[https://webpack.js.org/guides/getting-started/]  
 npx webpack / npm run build     
 npx webpack serve  
@@ -26,7 +64,7 @@ webpack.config.js devServ的public改為dist。
 ```js
 const path = require('path');
 module.exports = {
-    mode: 'development',
+  mode: 'development',
   entry: './src/index.js',
   output: {
     filename: 'main.js',
