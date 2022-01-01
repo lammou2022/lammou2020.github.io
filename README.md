@@ -8,7 +8,7 @@
 
 ## Git / GitHub 源碼版本管理 
 
-網頁存於在github.io, 是也是github提供的功能!  
+網頁存於在github.io, 是github提供的功能!  
 
 ![](static/git_github.png)   
 
@@ -49,7 +49,7 @@ HTML5 CSS3 JS(jQuery, UI, Bootstrap)
 從下圖看出易學易用。最適合快速上手的人士!講求正確,不求速度。  
 python效能是相對的,對我們普通人來,速快足够快!  
 易用性，還有Node JS。   
-![ease of use python](rust_lang.png) 
+![ease of use python](static/rust_lang.png) 
 推薦     
 👍[生產力Python課程](https://github.com/makzan/Beginning-Python-Course)
 
