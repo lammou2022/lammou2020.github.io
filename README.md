@@ -60,6 +60,7 @@ The “micro” in microframework means Flask aims to keep the core simple but e
 Flask是一個使用Python編寫的Web應用微框架。基於Werkzeug WSGI工具箱和Jinja2模板引擎，使用簡單的核心，用擴充增加其他功能。  
 
 ## 四. 資料庫MySQL/SQLite,Redis
+![](static/database_category.png)
 
 ## 五. Python ORM資料庫操作
 
