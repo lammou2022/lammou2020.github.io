@@ -9,7 +9,7 @@ lammou2020.github.io
 以下介紹快速入門的技能，主要網頁應用。有了大綱，之后再補充說明。
 
 ## Git / GitHub 源碼版本管理 
-![git](https://i.stack.imgur.com/jwCeV.png)
+
 [文檔書寫MarkDowm語法](https://www.markdownguide.org/basic-syntax/)
 
 ## Web 前端
@@ -57,7 +57,7 @@ C ,C++, .net, Java。 Go/Rust更具未來性。
 回顧，學習程式設計這門課的時候，理論算法很多。導師還是提供了實戰機會，數學基礎，職業技能，軟件技術趋向，英語技能，前沿性，當時沒懂。
 以上是我用Web前端和Python后端到技能，還有實作往后同大家分享!
 
-# [日誌](dairy.html)
+# 日誌 [link](dairy.html)
 
 
 
