@@ -9,9 +9,20 @@ lammou2020.github.io
 以下介紹快速入門的技能，主要網頁應用。有了大綱，之后再補充說明。
 
 ## Git / GitHub 源碼版本管理 
-![](https://git-scm.com/images/logo@2x.png)
-![](https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png)    
-[文檔書寫MarkDowm語法](https://www.markdownguide.org/basic-syntax/)
+![](static/git_github.png)   
+[QuickStart](https://docs.github.com/en/get-started/quickstart/hello-world)
+```text
+GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+```
+[實作內容](git.html)
+
+![](static/markdown.png)
+[文檔書寫 MarkDowm](https://www.markdownguide.org/basic-syntax/)  
+```text
+The Markdown Guide is a free and open-source reference guide that explains how to use Markdown, the simple and easy-to-use markup language you can use to format virtually any document.
+```
 
 ## Web 前端
 
