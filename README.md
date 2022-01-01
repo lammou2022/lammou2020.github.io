@@ -33,17 +33,38 @@ The Markdown Guide is a free and open-source reference guide that explains how t
 
 ## 一. Web 前端
 
-HTML5 CSS3 JS(jQuery, UI, Bootstrap) 
+HTML5 CSS3 JS
 ![](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript/execution.png)
-### [HTML5](html5.md)
+
+### HTML5
+
+HTML is the markup language that we use to structure and give meaning to our web content, for example defining paragraphs, headings, and data tables, or embedding images and videos in the page.
+
+[實作內容](html5.html)   
 
 ### CSS3
 
+CSS is a language of style rules that we use to apply styling to our HTML content, for example setting background colors and fonts, and laying out our content in multiple columns.
+
+[實作內容](css3.html)   
+
 ### JavaScript
 
-### jQuery,jQueryUI
+JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. (Okay, not everything, but it is amazing what you can achieve with a few lines of JavaScript code.)
+
+基礎JS(loop, if, array, JSON), 進階DOM, AJAX。
+
+[實作內容](js_ex.html)   
+
+### jQuery及UI
+
+jQuery是一套跨瀏覽器的JavaScript函式庫，用於簡化HTML與JavaScript之間的操作。
+
+[實作內容](jquery_ui_ex.html)   
 
 ### Bootstrap
+
+自適應網頁設計(Responsive web design)，網頁自適應不同設備如, 電腦、手機、平板等設備Monitor尺寸。
 
 ## 二.  Python 易學易用
 從下圖看出易學易用。最適合快速上手的人士!講求正確,不求速度。  
