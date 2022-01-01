@@ -70,12 +70,12 @@ C ,C++, .net, Java。 Go/Rust更具未來性。
 回顧，學習程式設計這門課的時候，理論算法很多。導師還是提供了實戰機會，數學基礎，職業技能，軟件技術趋向，英語技能，前沿性，當時沒懂。
 以上是我用Web前端和Python后端到技能，還有實作往后同大家分享!
 
-# 日誌 [link](dairy.html)
+## 日記 
+[link](dairy.html)
 
+## 關於
 
+我的動態域名,用不了,先留用着。464r747p64.qicp.vip   
+[My RapPi WebSite](http://464r747p64.qicp.vip)
 
-## 我的動態域名,用不了,先留用着。
-464r747p64.qicp.vip
-[My Rapberry Pi WebSite](http://464r747p64.qicp.vip)
-
-## contact to lammou@mail.mbc.edu.mo
+contact to: lammou@mail.mbc.edu.mo
