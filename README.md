@@ -59,11 +59,11 @@ python效能是相對的,對我們普通人來,速快足够快!
 The “micro” in microframework means Flask aims to keep the core simple but extensible.  
 Flask是一個使用Python編寫的Web應用微框架。基於Werkzeug WSGI工具箱和Jinja2模板引擎，使用簡單的核心，用擴充增加其他功能。  
 
-## 三. 資料庫MySQL/SQLite,Redis
+## 四. 資料庫MySQL/SQLite,Redis
 
-## 四. Python ORM資料庫操作
+## 五. Python ORM資料庫操作
 
-## 五. Python套件
+## 六. Python套件
 
 ```python
 Requests 
@@ -79,7 +79,7 @@ Scipy
 Sympy
 ```
 
-## 六.未來程式比較
+## 七.未來程式比較
 
 易用性,Python , JS, Ruby。   
 難學的有 C ,C++,.net,Java。  
