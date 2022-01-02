@@ -2,11 +2,12 @@
 
 ## 前言
 
-自我介紹，每天垦作的碼農，我的同學都不凡，我是最平凡一個人。每個人都須要有個名片，那我寫一些技能總結，同身邊同事分享。
+自我介紹，每天垦作的碼農，也做過幾年電腦老師，我是最平凡一個人。每當培訓課時被問，隔離是公務員，慱企，大公營事業，我還是有理想的，真是來學野的!
 
-以下介紹快速入門的技能，主要網頁應用。
+我寫一些快速入門編程技能，總結，同大家分享。
 
 ## Git / GitHub 源碼版本管理 
+
 
 網頁存於在github.io, 是github提供的功能!  
 
@@ -18,12 +19,15 @@ GitHub is a code hosting platform for version control and collaboration. It lets
 
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
-
 Local 本地版本控制version control 是 git     
 Server 是github提供雲端伺服.     
 ![](https://git-scm.com/book/en/v2/images/distributed.png)   
 
 [實作內容](git.html)
+
+推薦     
+👍[生產力Git課程](https://github.com/makzan/beginning-git-version-control)    
+
 
 ![](static/markdown.png)
 
