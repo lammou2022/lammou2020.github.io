@@ -52,13 +52,12 @@ c:\code\tigeryear2022.github.io>git push
 c:\code\tigeryear2022.github.io>rem "出現網頁要求輸入用戶密碼"
 ```
 
-5. 加入文件
-
+5. 我第一個HTML
 ```cmd
 static\js
 static\css
 static\img
-page2.html
+first.html
 index.md
 ```
 
