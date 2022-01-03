@@ -35,7 +35,7 @@ Git is a free and open source distributed version control system designed to han
 3. github pages 實作內容   
 參考[Github Pages QuickStart](https://docs.github.com/cn/pages/getting-started-with-github-pages/creating-a-github-pages-site)     
 假設: tigeryear2022.github.io  
-readme.md(使用Markdown文檔指令)   
+index.md(使用Markdown文檔指令)   
 A.修改主標題  
 B.插入圖片   
 C.超連結   
