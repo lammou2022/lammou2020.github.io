@@ -12,8 +12,6 @@
 
 ![](static/git_github.png)   
 
-[安裝Git](https://git-scm.com/download/win)   
-[註冊GitHub](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)  
 
 學習推薦     
 👍[生產力Git課程](https://github.com/makzan/beginning-git-version-control)    
@@ -29,15 +27,20 @@ Git is a free and open source distributed version control system designed to han
 ![](https://git-scm.com/book/en/v2/images/distributed.png)   
 
 作業:
-1. github pages 實作內容   
-1.1.👍[Github Pages QuickStart](https://docs.github.com/cn/pages/getting-started-with-github-pages/creating-a-github-pages-site)     
+
+1. [安裝Git](https://git-scm.com/download/win)   
+
+2. [註冊GitHub](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)  
+
+3. github pages 實作內容   
+參考[Github Pages QuickStart](https://docs.github.com/cn/pages/getting-started-with-github-pages/creating-a-github-pages-site)     
 假設: tigeryear2022.github.io  
-index.md (使用Markdown文檔指今,可參考Markdown Link)   
+readme.md(使用Markdown文檔指令)   
 A.修改主標題  
 B.插入圖片   
 C.超連結   
 
-1.2 Git
+4. Git
 ```cmd
 c:\code>git clone https://github.com/tigeryear2022.github.io
 c:\code\tigeryear2022.github.io>git --global user.email=""
@@ -49,13 +52,15 @@ c:\code\tigeryear2022.github.io>git push
 c:\code\tigeryear2022.github.io>rem "出現網頁要求輸入用戶密碼"
 ```
 
-1.3 vscode
-```cmd
-c:\code\tigeryear2022.github.io>code .
-```
+5. 加入文件
 
-1.3 加入static文件
-js css html
+```cmd
+static\js
+static\css
+static\img
+page2.html
+index.md
+```
 
 [git 其他內容...](git.html) 
 
