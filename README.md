@@ -73,7 +73,7 @@ index.md
 ```html
 <html>
   <head>
-    <script src=static/a.js>
+    <script src=static/a.js></script>
     <link rel="stylesheet" href="static/a.css">
   </head>
   <body>
