@@ -4,30 +4,60 @@
 
 自我介紹，我是碼農，也做過幾年電腦老師，我是最平凡一個人。每當培訓課時被問，隔離是公務員、慱企、大公營事業等等，我還是有理想的，真是來學野的!
 
-我寫一些快速入門編程技能，總結，與同學們分享。
+綜述個人對網站編程技能總結，寫一些最簡單用法，同學們分享。不足之處，請多指教!
 
-## Git / GitHub 源碼版本管理 
-
+## Git/GitHub 源碼版本管理
 
 網頁存於在github.io, 是github提供的功能!  
 
 ![](static/git_github.png)   
 
-[QuickStart](https://docs.github.com/en/get-started/quickstart/hello-world)
+[安裝Git](https://git-scm.com/download/win)   
+[註冊GitHub](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)  
 
+學習推薦     
+👍[生產力Git課程](https://github.com/makzan/beginning-git-version-control)    
+👍[Github QuickStart](https://docs.github.com/en/get-started/quickstart/hello-world)
+
+
+簡單說明關係!   
 GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+源碼版本管理及恊作遠端雲平台，讓你同其人也一齊恊助完成項目(不限地點)。
 
-Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.(free and open source)源碼版本管理系統。
 
-Local 本地版本控制version control 是 git     
-Server 是github提供雲端伺服.     
 ![](https://git-scm.com/book/en/v2/images/distributed.png)   
 
-[實作內容](git.html)
+作業:
+1. github pages 實作內容   
+1.1.👍[Github Pages QuickStart](https://docs.github.com/cn/pages/getting-started-with-github-pages/creating-a-github-pages-site)     
+假設: tigeryear2022.github.io  
+index.md (使用Markdown文檔指今,可參考Markdown Link)   
+A.修改主標題  
+B.插入圖片   
+C.超連結   
 
-推薦     
-👍[生產力Git課程](https://github.com/makzan/beginning-git-version-control)    
+1.2 Git
+```cmd
+c:\code>git clone https://github.com/tigeryear2022.github.io
+c:\code\tigeryear2022.github.io>git --global user.email=""
+c:\code\tigeryear2022.github.io>git --global user=""
+c:\code\tigeryear2022.github.io>notepad index.md 
+c:\code\tigeryear2022.github.io>git add .
+c:\code\tigeryear2022.github.io>git commit -m "修改主頁"
+c:\code\tigeryear2022.github.io>git push
+c:\code\tigeryear2022.github.io>rem "出現網頁要求輸入用戶密碼"
+```
 
+1.3 vscode
+```cmd
+c:\code\tigeryear2022.github.io>code .
+```
+
+1.3 加入static文件
+js css html
+
+[git 其他內容...](git.html) 
 
 ![](static/markdown.png)
 
@@ -78,18 +108,26 @@ python效能是相對的,對我們普通人來,速快足够快!
 推薦     
 👍[生產力Python課程](https://github.com/makzan/Beginning-Python-Course)
 
-## 三. Flask是Python網站應用框架。
+## 三. 資料庫MySQL/SQLite,Redis
+![](static/database_category.png)
+
+
+## 四. Web 后端
+
+### Django / Flask， 二者皆為Python網站應用框架。
+
 ![](static/flask_django.png)   
+
+我會主要介紹Flask。   
 
 The “micro” in microframework means Flask aims to keep the core simple but extensible.  
 Flask是一個使用Python編寫的Web應用微框架。基於Werkzeug WSGI工具箱和Jinja2模板引擎，使用簡單的核心，用擴充增加其他功能。  
 
-## 四. 資料庫MySQL/SQLite,Redis
-![](static/database_category.png)
+### Python Session/login/logout 
 
-## 五. Python ORM資料庫操作
+### Python ORM資料庫操作
 
-## 六. Python Module套件
+## 五. Python Module套件
 
 |套件|
 |---|
@@ -105,7 +143,7 @@ Flask是一個使用Python編寫的Web應用微框架。基於Werkzeug WSGI工�
 |Scipy|
 |Sympy|
 
-## 七. Computer Language of Future未來程式比較
+## 六. Computer Language of Future未來程式比較
 
 易用性,Python , JS, Ruby。   
 難學的有 C ,C++,.net,Java。  
@@ -123,6 +161,6 @@ Go/Rust更具未來性，有餘力可以努力加油!
 ## About 關於
 
 我的動態域名,用不了,先留用着。464r747p64.qicp.vip   
-[My RapPi WebSite](http://464r747p64.qicp.vip)
+[RapPiWebSite](http://464r747p64.qicp.vip)
 
 contact to: mbc11thsp@gmail.com
