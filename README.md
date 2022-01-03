@@ -82,7 +82,7 @@ index.md
     粵華南虎誕孖仔祝元旦
     </p>
     <img src="static/a.png">
-    <a href="http://www.macaodaily.com/">macaodaily</a>
+    <a href="http://www.macaodaily.com/html/2022-01/02/content_1567768.htm">macaodaily</a>
   </body>
 </html>
 ```
