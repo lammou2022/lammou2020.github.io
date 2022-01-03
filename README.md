@@ -70,7 +70,7 @@ first.html
 index.md
 ```
 [first.html](first.html)  
-```
+<code>
 <html>
   <head>
     <script src=static/a.js></script>
@@ -85,7 +85,7 @@ index.md
     <a href="http://www.macaodaily.com/html/2022-01/02/content_1567768.htm">macaodaily</a>
   </body>
 </html>
-```
+</code>
 
 
 [git 其他內容...](git.html) 
