@@ -46,6 +46,7 @@ c:\code>git clone https://github.com/tigeryear2022.github.io
 c:\code\tigeryear2022.github.io>git --global user.email=""
 c:\code\tigeryear2022.github.io>git --global user=""
 c:\code\tigeryear2022.github.io>notepad index.md 
+c:\code\tigeryear2022.github.io>rem "修改完之后,提交。往后有修改add commit push。"
 c:\code\tigeryear2022.github.io>git add .
 c:\code\tigeryear2022.github.io>git commit -m "修改主頁"
 c:\code\tigeryear2022.github.io>git push
