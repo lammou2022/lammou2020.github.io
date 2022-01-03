@@ -31,37 +31,62 @@ Git is a free and open source distributed version control system designed to han
 1. [安裝Git](https://git-scm.com/download/win)   
 
 2. [註冊GitHub](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)  
+假設:  
+註冊Email: tigeryear2022@gmail.com   
+註冊用戶: tigeryear2022    
 
 3. github pages 實作內容   
 參考[Github Pages QuickStart](https://docs.github.com/cn/pages/getting-started-with-github-pages/creating-a-github-pages-site)     
-假設: tigeryear2022.github.io  
-index.md(使用Markdown文檔指令)   
+假設: tigeryear2022.github.io 
+選擇:Theme  
+自動生index.md(使用Markdown文檔指令。註:這裡用md格式, 而不是html格式)     
 A.修改主標題  
 B.插入圖片   
 C.超連結   
 
-4. Git
+4. 使用Git指令: clone add commit push
 ```cmd
+註:複製clone雲端源碼
 c:\code>git clone https://github.com/tigeryear2022.github.io
-c:\code\tigeryear2022.github.io>git --global user.email=""
-c:\code\tigeryear2022.github.io>git --global user=""
+c:\code>cd tigeryear2022.github.io
+註:設定用戶
+c:\code\tigeryear2022.github.io>git --global user.email="tigeryear2022@gmail.com"
+c:\code\tigeryear2022.github.io>git --global user="tigeryear2022"
+註:修改
 c:\code\tigeryear2022.github.io>notepad index.md 
-c:\code\tigeryear2022.github.io>rem "修改完之后,提交。往后有修改add commit push。"
+註: 修改完之后,提交。add, commit, push。
 c:\code\tigeryear2022.github.io>git add .
 c:\code\tigeryear2022.github.io>git commit -m "修改主頁"
 c:\code\tigeryear2022.github.io>git push
-c:\code\tigeryear2022.github.io>rem "出現網頁要求輸入用戶密碼"
+註: 出現網頁要求輸入用戶密碼。完成同Github同步。
 ```
 
 5. 我第一個HTML
 ```cmd
-static\js
-static\css
-static\img
+static\a.js
+static\a.css
+static\a.png
 first.html
 index.md
 ```
-[my first html](first.html)
+[first.html](first.html)  
+```html
+<html>
+  <head>
+    <script src=a.js>
+    <link rel="stylesheet" href="a.css">
+  </head>
+  <body>
+    <h1>Hello!</h1>
+    <p>
+    粵華南虎誕孖仔祝元旦
+    </p>
+    <img src="static/a.png">
+    <a href="http://www.macaodaily.com/">macaodaily</a>
+  </body>
+</html>
+```
+
 
 [git 其他內容...](git.html) 
 
