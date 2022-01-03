@@ -70,22 +70,22 @@ first.html
 index.md
 ```
 [first.html](first.html)  
-<code>
-<html>
-  <head>
-    <script src=static/a.js></script>
-    <link rel="stylesheet" href="static/a.css">
-  </head>
-  <body>
-    <h1>Hello!</h1>
-    <p>
+```html
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;script src=static/a.js&gt;&lt;/script&gt;
+    &lt;link rel="stylesheet" href="static/a.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello!&lt;/h1&gt;
+    &lt;p&gt;
     粵華南虎誕孖仔祝元旦
-    </p>
-    <img src="static/a.png">
-    <a href="http://www.macaodaily.com/html/2022-01/02/content_1567768.htm">macaodaily</a>
-  </body>
-</html>
-</code>
+    &lt;/p&gt;
+    &lt;img src="static/a.png"&gt;
+    &lt;a href="http://www.macaodaily.com/html/2022-01/02/content_1567768.htm"&gt;macaodaily&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+```
 
 
 [git 其他內容...](git.html) 
