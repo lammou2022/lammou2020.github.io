@@ -91,19 +91,19 @@ Flask是一個使用Python編寫的Web應用微框架。基於Werkzeug WSGI工�
 
 ## 六. Python套件
 
-```python
-Requests 
-Untangle
-BeautifulSoup4
-Selenium	
-Numpy 
-Pandas
-MatPlotLib
-python-docx
-openpyxl
-Scipy
-Sympy
-```
+|套件|
+|---|
+|Requests |
+|Untangle|
+|BeautifulSoup4|
+|Selenium	|
+|Numpy |
+|Pandas|
+|MatPlotLib|
+|python-docx|
+|openpyxl|
+|Scipy|
+|Sympy|
 
 ## 七.未來程式比較
 
