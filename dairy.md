@@ -1,4 +1,11 @@
 # diary
+## 2022-01-03 有感而發
+
+智能駕駛來!  
+國內好多用ROS2模型來開發  
+有創新蔡同事識,好利害!!!   
+![智能駕駛來](https://www.youtube.com/watch?v=RZ0fl1dPrgE)   
+
 ## 2021-12-31 前端工具 Webpack 
 (QuickStart)[https://webpack.js.org/guides/getting-started/]  
 npx webpack / npm run build     
