@@ -99,7 +99,7 @@ Selenium
 Numpy 
 Pandas
 MatPlotLib
-python-docx,
+python-docx
 openpyxl
 Scipy
 Sympy
