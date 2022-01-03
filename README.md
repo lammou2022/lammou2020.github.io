@@ -81,16 +81,16 @@ The Markdown Guide is a free and open-source reference guide that explains how t
 
 ## 一. Web 前端
 
-HTML5 CSS3 JS
+HTML CSS JS
 ![](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript/execution.png)
 
-### HTML5
+### HTML
 
 HTML is the markup language that we use to structure and give meaning to our web content, for example defining paragraphs, headings, and data tables, or embedding images and videos in the page.
 
 [實作內容](html5.html)   
 
-### CSS3
+### CSS
 
 CSS is a language of style rules that we use to apply styling to our HTML content, for example setting background colors and fonts, and laying out our content in multiple columns.
 
@@ -100,7 +100,7 @@ CSS is a language of style rules that we use to apply styling to our HTML conten
 
 JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. (Okay, not everything, but it is amazing what you can achieve with a few lines of JavaScript code.)
 
-基礎JS(loop, if, array, JSON), 進階DOM, AJAX。
+基礎JS(if, loop, funciton, JSON), 進階(DOM, AJAX, Async/Sync)。
 
 [實作內容](js_ex.html)   
 
@@ -128,7 +128,9 @@ python效能是相對的,對我們普通人來,速快足够快!
 
 ## 四. Web 后端
 
-### Django / Flask， 二者皆為Python網站應用框架。
+### Django/Flask網站應用框架
+
+二者皆為Python網站應用框架。
 
 ![](static/flask_django.png)   
 
@@ -137,11 +139,17 @@ python效能是相對的,對我們普通人來,速快足够快!
 The “micro” in microframework means Flask aims to keep the core simple but extensible.  
 Flask是一個使用Python編寫的Web應用微框架。基於Werkzeug WSGI工具箱和Jinja2模板引擎，使用簡單的核心，用擴充增加其他功能。  
 
-### Python Session/login/logout 
+### Session
 
-### Python ORM資料庫操作
+flask_session
 
-## 五. Python Module套件
+### ORM資料庫操作
+
+flask_sqlachemy
+
+### 4.1實作
+
+## 五. 常用Python Module套件
 
 |套件|
 |---|
@@ -157,7 +165,7 @@ Flask是一個使用Python編寫的Web應用微框架。基於Werkzeug WSGI工�
 |Scipy|
 |Sympy|
 
-## 六. Computer Language of Future未來程式比較
+## 六. Computer Language for Future未來程式比較
 
 易用性,Python , JS, Ruby。   
 難學的有 C ,C++,.net,Java。  
@@ -168,13 +176,10 @@ Go/Rust更具未來性，有餘力可以努力加油!
 回顧，學習程式設計這門課的時候，理論算法很多。導師還是提供了實戰機會，數學基礎，職業技能，軟件技術趋向，英語技能，前沿性，當時沒懂。
 我想寫總結一下Web前端和Python后端的技能，還有SampleCode實作分享! 努力寫作中! 耐心等待....
 
-## Diary 日記 
-
-[link](dairy.html)
-
 ## About 關於
 
-我的動態域名,用不了,先留用着。464r747p64.qicp.vip   
-[RapPiWebSite](http://464r747p64.qicp.vip)
+我的[日記diary](diary.html)
+
+我的動態域名,[464r747p64.qicp.vip](http://464r747p64.qicp.vip) 用不了,先留用着。   
 
 contact to: mbc11thsp@gmail.com
