@@ -70,23 +70,6 @@ first.html
 index.md
 ```
 [first.html](first.html)  
-```html
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;script src=static/a.js&gt;&lt;/script&gt;
-    &lt;link rel="stylesheet" href="static/a.css"&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Hello!&lt;/h1&gt;
-    &lt;p&gt;
-    粵華南虎誕孖仔祝元旦
-    &lt;/p&gt;
-    &lt;img src="static/a.png"&gt;
-    &lt;a href="http://www.macaodaily.com/html/2022-01/02/content_1567768.htm"&gt;macaodaily&lt;/a&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-```
-
 
 [git 其他內容...](git.html) 
 
