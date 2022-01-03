@@ -70,7 +70,7 @@ first.html
 index.md
 ```
 [first.html](first.html)  
-```html
+```
 <html>
   <head>
     <script src=static/a.js></script>
