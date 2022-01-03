@@ -89,7 +89,7 @@ Flask是一個使用Python編寫的Web應用微框架。基於Werkzeug WSGI工�
 
 ## 五. Python ORM資料庫操作
 
-## 六. Python套件
+## 六. Python Module套件
 
 |套件|
 |---|
@@ -105,22 +105,22 @@ Flask是一個使用Python編寫的Web應用微框架。基於Werkzeug WSGI工�
 |Scipy|
 |Sympy|
 
-## 七.未來程式比較
+## 七. Computer Language of Future未來程式比較
 
 易用性,Python , JS, Ruby。   
 難學的有 C ,C++,.net,Java。  
 Go/Rust更具未來性，有餘力可以努力加油!   
 
-## 總結
+## Summary 總結
 
 回顧，學習程式設計這門課的時候，理論算法很多。導師還是提供了實戰機會，數學基礎，職業技能，軟件技術趋向，英語技能，前沿性，當時沒懂。
-我想寫總結一下 Web前端和Python后端的技能，還有Sample Code 實作分享! 先寫些大綱，之后再補充說明。努力寫作中! 耐心等待....
+我想寫總結一下Web前端和Python后端的技能，還有SampleCode實作分享! 努力寫作中! 耐心等待....
 
-## 日記 
+## Diary 日記 
 
 [link](dairy.html)
 
-## 關於
+## About 關於
 
 我的動態域名,用不了,先留用着。464r747p64.qicp.vip   
 [My RapPi WebSite](http://464r747p64.qicp.vip)
