@@ -169,6 +169,8 @@ Note that Python 3.9.9 cannot be used on Windows 7 or earlier.
 Download Windows installer (64-bit)
 ```
 
+自帶模組管理程式: pip
+
 ## 三. 資料庫MySQL/SQLite,Redis
 
 ![](static/database_category.png)
@@ -193,15 +195,7 @@ Flask是一個使用Python編寫的Web應用微框架。基於Werkzeug WSGI工�
 ### Flask_Bookshelf例子
 [bookshelf](https://github.com/lammou2020/bookshelf)
 
-### virtual_env及運行
-```cmd
-git clone https://github.com/lammou2020/bookshelf
-bookshelf>python -m venv env
-bookshelf>env\scripts\activate
-(env) bookshelf>pip install -r requirements.txt
-(env) bookshelf>python bookshelf\model_cloudsql.py
-(env) bookshelf>python main.py
-```
+安裝所需模組    
 requirements.txt   
 ```text
 Flask=1.1.2
@@ -212,6 +206,17 @@ Flask-Session=0.3.2
 redis=3.5.3
 PyMySQL=0.10.1
 ```
+
+### virtual_env、安裝模組並運行
+```cmd
+git clone https://github.com/lammou2020/bookshelf
+bookshelf>python -m venv env
+bookshelf>env\scripts\activate
+(env) bookshelf>pip install -r requirements.txt
+(env) bookshelf>python bookshelf\model_cloudsql.py
+(env) bookshelf>python main.py
+```
+
 ### Session會話
 
 Flask-Session
@@ -235,18 +240,18 @@ Scipy
 Sympy
 ```
 
-## 六. Computer Language for Future未來程式比較
+## 六. Computer_Language_for_Future未來程式比較
 
 易用性,Python , JS, Ruby。   
 難學的有 C ,C++,.net,Java。  
 Go/Rust更具未來性，有餘力可以努力加油!   
 
-## 七. Summary 總結
+## 七. Summary_總結
 
 回顧，學習程式設計這門課的時候，理論算法很多。導師還是提供了實戰機會，數學基礎，職業技能，軟件技術趋向，英語技能，前沿性，當時沒懂。
 我想寫總結一下Web前端和Python后端的技能，還有SampleCode實作分享! 努力寫作中! 耐心等待....
 
-## 八. About 關於
+## 八. About_關於
 
 我的[日記diary](diary.html)
 
