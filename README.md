@@ -83,8 +83,20 @@ index.md
 &#x201C;http://www.example.com/report&#x201D;:
 
 <pre style="color:white;">
-&lt;p class="moreinfo"&gt;For more information see the
-&lt;a href="http://www.example.com/report"&gt;final report&lt;/a&gt;.&lt;/p&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;script src=static/a.js&gt;&lt;/script&gt;
+    &lt;link rel="stylesheet" href="static/a.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;My first Page &lt;/h1&gt;
+    &lt;img src=a.png&gt;  
+
+    &lt;p class="moreinfo"&gt;For more information see the
+    &lt;a href="http://www.example.com/report"&gt;final report&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
 </pre>
 
 <p>
