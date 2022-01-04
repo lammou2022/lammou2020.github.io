@@ -65,6 +65,12 @@ c:\code\tigeryear2022.github.io>git --global user="tigeryear2022"
 註:修改
 c:\code\tigeryear2022.github.io>notepad index.md 
 註: 修改完之后,提交。add, commit, push。
+(env) C:\code\tigeryear2022.github.io>git add .
+
+(env) C:\code\tigeryear2022.github.io>git commit -m "update readme.md"
+[main 77f5e2a] update readme.md
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+
 c:\code\tigeryear2022.github.io>git add .
 c:\code\tigeryear2022.github.io>git commit -m "修改主頁"
 c:\code\tigeryear2022.github.io>git push
