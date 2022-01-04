@@ -48,11 +48,12 @@ C.超連結
 ```cmd
 註:複製clone雲端源碼
 (env) C:\code>git clone https://github.com/tigeryear2022/tigeryear2022.github.io
+
 Cloning into 'tigeryear2022.github.io'...
 remote: Enumerating objects: 223, done.
 remote: Counting objects: 100% (206/206), done.
 remote: Compressing objects: 100% (184/184), done.
-remote: Total 223 (delta 97), reused 42 (delta 12), pack-reused 17 eceiving objects:  75% (168/223), 388.00 KiB | 734.00Receiving objects: 100% (223/223), 627.48 KiB | 870.00 KiB/s, done.
+remote: Total 223 (delta 97), done.
 Resolving deltas: 100% (97/97), done.
 
 (env) C:\code>cd tigeryear2022.github.io
@@ -64,17 +65,23 @@ c:\code\tigeryear2022.github.io>git --global user="tigeryear2022"
 
 註:修改
 c:\code\tigeryear2022.github.io>notepad index.md 
+
 註: 修改完之后,提交。add, commit, push。
 (env) C:\code\tigeryear2022.github.io>git add .
-
 (env) C:\code\tigeryear2022.github.io>git commit -m "update readme.md"
 [main 77f5e2a] update readme.md
  1 file changed, 12 insertions(+), 2 deletions(-)
 
-c:\code\tigeryear2022.github.io>git add .
-c:\code\tigeryear2022.github.io>git commit -m "修改主頁"
-c:\code\tigeryear2022.github.io>git push
 註: 出現網頁要求輸入用戶密碼。完成同Github同步。
+(env) C:\code\tigeryear2022.github.io>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 570 bytes | 51.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/tigeryear2022/tigeryear2022.github.io
+   f8dbdd1..77f5e2a  main -> main
 ```
 
 5. 我第一個HTML
