@@ -47,11 +47,21 @@ C.超連結
 4. 使用Git指令: clone add commit push
 ```cmd
 註:複製clone雲端源碼
-c:\code>git clone https://github.com/tigeryear2022.github.io
-c:\code>cd tigeryear2022.github.io
+(env) C:\code>git clone https://github.com/tigeryear2022/tigeryear2022.github.io
+Cloning into 'tigeryear2022.github.io'...
+remote: Enumerating objects: 223, done.
+remote: Counting objects: 100% (206/206), done.
+remote: Compressing objects: 100% (184/184), done.
+remote: Total 223 (delta 97), reused 42 (delta 12), pack-reused 17 eceiving objects:  75% (168/223), 388.00 KiB | 734.00Receiving objects: 100% (223/223), 627.48 KiB | 870.00 KiB/s, done.
+Resolving deltas: 100% (97/97), done.
+
+(env) C:\code>cd tigeryear2022.github.io
+(env) C:\code\tigeryear2022.github.io>
+
 註:設定用戶
 c:\code\tigeryear2022.github.io>git --global user.email="tigeryear2022@gmail.com"
 c:\code\tigeryear2022.github.io>git --global user="tigeryear2022"
+
 註:修改
 c:\code\tigeryear2022.github.io>notepad index.md 
 註: 修改完之后,提交。add, commit, push。
