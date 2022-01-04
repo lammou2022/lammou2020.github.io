@@ -112,7 +112,7 @@ index.md
 p.moreinfo { font-style: italic }
 </pre>
 
-[git 其他內容...](git.html) 
+[git 其他內容...](lecture/git.html) 
 
 ![](static/markdown.png)
 
@@ -129,13 +129,13 @@ HTML CSS JS
 
 HTML is the markup language that we use to structure and give meaning to our web content, for example defining paragraphs, headings, and data tables, or embedding images and videos in the page.
 
-[實作內容](html5.html)   
+[實作內容](lecture/html5.html)   
 
 ### CSS
 
 CSS is a language of style rules that we use to apply styling to our HTML content, for example setting background colors and fonts, and laying out our content in multiple columns.
 
-[實作內容](css3.html)   
+[實作內容](lecture/css3.html)   
 
 ### JavaScript
 
@@ -143,13 +143,13 @@ JavaScript is a scripting language that enables you to create dynamically updati
 
 基礎JS(if, loop, funciton, JSON), 進階(DOM, AJAX, Async/Sync)。
 
-[實作內容](js_ex.html)   
+[實作內容](lecture/js_ex.html)   
 
 ### jQuery及UI
 
 jQuery是一套跨瀏覽器的JavaScript函式庫，用於簡化HTML與JavaScript之間的操作。
 
-[實作內容](jquery_ui_ex.html)   
+[實作內容](lecture/jquery_ui_ex.html)   
 
 ### Bootstrap
 
@@ -191,7 +191,7 @@ flask_sqlachemy
 ### 4.1實作
 
 ## 五. 常用Python Module套件
-
+|---|
 |套件|
 |---|
 |Requests |
