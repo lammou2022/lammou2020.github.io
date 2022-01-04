@@ -220,22 +220,20 @@ Flask-Session
 
 Flask-SQLAlchemy
 
-
 ## 五. 常用Python Module套件
-|---|
-|套件|
-|---|
-|Requests |
-|Untangle|
-|BeautifulSoup4|
-|Selenium	|
-|Numpy |
-|Pandas|
-|MatPlotLib|
-|python-docx|
-|openpyxl|
-|Scipy|
-|Sympy|
+```text
+Requests 
+Untangle
+BeautifulSoup4
+Selenium	
+Numpy 
+Pandas
+MatPlotLib
+python-docx
+openpyxl
+Scipy
+Sympy
+```
 
 ## 六. Computer Language for Future未來程式比較
 
@@ -243,12 +241,12 @@ Flask-SQLAlchemy
 難學的有 C ,C++,.net,Java。  
 Go/Rust更具未來性，有餘力可以努力加油!   
 
-## Summary 總結
+## 七. Summary 總結
 
 回顧，學習程式設計這門課的時候，理論算法很多。導師還是提供了實戰機會，數學基礎，職業技能，軟件技術趋向，英語技能，前沿性，當時沒懂。
 我想寫總結一下Web前端和Python后端的技能，還有SampleCode實作分享! 努力寫作中! 耐心等待....
 
-## About 關於
+## 八. About 關於
 
 我的[日記diary](diary.html)
 
