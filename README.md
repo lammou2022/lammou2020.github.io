@@ -80,6 +80,24 @@ index.md
 ```
 [first.html](first.html)  
 
+&#x201C;http://www.example.com/report&#x201D;:
+
+<pre>
+&lt;p class="moreinfo"&gt;For more information see the
+&lt;a href="http://www.example.com/report"&gt;final report&lt;/a&gt;.&lt;/p&gt;
+</pre>
+
+<p>
+			   The <code>class</code> attribute on the
+			   paragraph's start tag (&#x201C;&lt;p&gt;&#x201D;) can be
+			   used, among other thing, to add style. For
+			   instance, to italicize the text of all
+			   paragraphs with a class of &#x201C;moreinfo,&#x201D; one
+			   could write, in CSS:
+</p>
+
+<pre>p.moreinfo { font-style: italic }</pre>
+
 [git 其他內容...](git.html) 
 
 ![](static/markdown.png)
