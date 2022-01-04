@@ -1,4 +1,4 @@
-# 網頁應用初級設計
+# 網頁設計及應用-入門
 
 ## 前言
 
@@ -122,18 +122,17 @@ The Markdown Guide is a free and open-source reference guide that explains how t
 
 ## 一. Web 前端
 
-HTML CSS JS
+參考標準[w3](https://www.w3.org/standards/webdesign/)分類，HTML&CSS , JavaScript Web APIs 
+
 ![](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript/execution.png)
 
-### HTML
+### HTML&CSS
 
 HTML is the markup language that we use to structure and give meaning to our web content, for example defining paragraphs, headings, and data tables, or embedding images and videos in the page.
 
-[實作內容](lecture/html5.html)   
-
-### CSS
-
 CSS is a language of style rules that we use to apply styling to our HTML content, for example setting background colors and fonts, and laying out our content in multiple columns.
+
+[實作內容](lecture/html5.html)   
 
 [實作內容](lecture/css3.html)   
 
@@ -145,7 +144,7 @@ JavaScript is a scripting language that enables you to create dynamically updati
 
 [實作內容](lecture/js_ex.html)   
 
-### jQuery及UI
+### 進階應用jQuery及UI
 
 jQuery是一套跨瀏覽器的JavaScript函式庫，用於簡化HTML與JavaScript之間的操作。
 
@@ -163,9 +162,20 @@ python效能是相對的,對我們普通人來,速快足够快!
 推薦     
 👍[生產力Python課程](https://github.com/makzan/Beginning-Python-Course)
 
+[python download](https://www.python.org/downloads/windows/)
+```cmd
+Python 3.9.9 - Nov. 15, 2021
+Note that Python 3.9.9 cannot be used on Windows 7 or earlier.
+Download Windows installer (64-bit)
+```
+
 ## 三. 資料庫MySQL/SQLite,Redis
+
 ![](static/database_category.png)
 
+[sqlite-tools-win32-x86-3370100.zip](https://sqlite.org/download.html)
+
+[Redis-x64-3.0.504.msi](https://github.com/microsoftarchive/redis/releases)
 
 ## 四. Web 后端
 
@@ -178,17 +188,38 @@ python效能是相對的,對我們普通人來,速快足够快!
 我會主要介紹Flask。   
 
 The “micro” in microframework means Flask aims to keep the core simple but extensible.  
-Flask是一個使用Python編寫的Web應用微框架。基於Werkzeug WSGI工具箱和Jinja2模板引擎，使用簡單的核心，用擴充增加其他功能。  
+Flask是一個使用Python編寫的Web應用微框架。基於Werkzeug WSGI工具箱和Jinja2模板引擎，使用簡單的核心，用擴充增加其他功能。 
 
-### Session
+### Flask_Bookshelf例子
+[bookshelf](https://github.com/lammou2020/bookshelf)
 
-flask_session
+### virtual_env及運行
+```cmd
+git clone https://github.com/lammou2020/bookshelf
+bookshelf>python -m venv env
+bookshelf>env\scripts\activate
+(env) bookshelf>pip install -r requirements.txt
+(env) bookshelf>python bookshelf\model_cloudsql.py
+(env) bookshelf>python main.py
+```
+requirements.txt   
+```text
+Flask=1.1.2
+Flask-SQLAlchemy=2.4.4
+PyMySQL==0.9.2
+six==1.15.0
+Flask-Session=0.3.2
+redis=3.5.3
+PyMySQL=0.10.1
+```
+### Session會話
+
+Flask-Session
 
 ### ORM資料庫操作
 
-flask_sqlachemy
+Flask-SQLAlchemy
 
-### 4.1實作
 
 ## 五. 常用Python Module套件
 |---|
