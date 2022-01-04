@@ -95,7 +95,7 @@ index.md
     &lt;p class="moreinfo"&gt;For more information see the
     &lt;a href="http://www.example.com/report"&gt;final report&lt;/a&gt;.&lt;/p&gt;
 
-&lt;/body&gt;
+  &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 
