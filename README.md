@@ -82,7 +82,7 @@ index.md
 
 &#x201C;http://www.example.com/report&#x201D;:
 
-<pre>
+<pre style="color:white;">
 &lt;p class="moreinfo"&gt;For more information see the
 &lt;a href="http://www.example.com/report"&gt;final report&lt;/a&gt;.&lt;/p&gt;
 </pre>
@@ -96,7 +96,9 @@ index.md
 			   could write, in CSS:
 </p>
 
-<pre>p.moreinfo { font-style: italic }</pre>
+<pre style="color:white;">
+p.moreinfo { font-style: italic }
+</pre>
 
 [git 其他內容...](git.html) 
 
