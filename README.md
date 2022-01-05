@@ -206,22 +206,34 @@ Download Windows installer (64-bit)
 
 [sqlite-tools-win32-x86-3370100.zip](https://sqlite.org/download.html)
 
+SQL簡單指令    
+```cmd
+
+
+
+```
+
 [Redis-x64-3.0.504.msi](https://github.com/microsoftarchive/redis/releases)
+
+noSQL簡單指令    
+```cmd
+
+
+
+```
 
 ## 四. Web 后端
 
 ### Django/Flask網站應用框架
 
-二者皆為Python網站應用框架。
+![](static/flask_django.png)二者皆為Python網站應用框架，我主要介紹Flask。   
 
-![](static/flask_django.png)   
-
-我會主要介紹Flask。   
 
 The “micro” in microframework means Flask aims to keep the core simple but extensible.  
 Flask是一個使用Python編寫的Web應用微框架。基於Werkzeug WSGI工具箱和Jinja2模板引擎，使用簡單的核心，用擴充增加其他功能。 
 
 ### Flask_Bookshelf例子
+
 [bookshelf](https://github.com/lammou2020/bookshelf)
 
 安裝所需模組    
@@ -237,6 +249,7 @@ PyMySQL=0.10.1
 ```
 
 ### virtual_env、安裝模組並運行
+
 ```cmd
 git clone https://github.com/lammou2020/bookshelf
 bookshelf>python -m venv env
@@ -248,13 +261,64 @@ bookshelf>env\scripts\activate
 
 ### Session會話
 
-Flask-Session
+Flask-Session & redis    
+```python
+from flask import Flask, session
+from flask.ext.session import Session
 
+app = Flask(__name__)
+# Check Configuration section for more details
+SESSION_TYPE = 'redis'
+app.config.from_object(__name__)
+Session(app)
+
+@app.route('/set/')
+def set():
+    session['key'] = 'value'
+    return 'ok'
+
+@app.route('/get/')
+def get():
+    return session.get('key', 'not set')
+```
+[doc](https://flask-session.readthedocs.io/en/latest/)
 ### ORM資料庫操作
+Flask-SQLAlchemy A Minimal Application     
+```python
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
-Flask-SQLAlchemy
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
+db = SQLAlchemy(app)
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+
+    def __repr__(self):
+        return '<User %r>' % self.username
+
+if __name__ == '__main__':
+    #from yourapplication import db,User
+    db.create_all()
+    #from yourapplication import User
+    admin = User(username='admin', email='admin@example.com')
+    guest = User(username='guest', email='guest@example.com')
+    db.session.add(admin)
+    db.session.add(guest)
+    db.session.commit()
+    User.query.all()
+    #[<User u'admin'>, <User u'guest'>]
+    User.query.filter_by(username='admin').first()
+    #<User u'admin'>
+```
+
+[doc](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
 
 ## 五. 常用Python Module套件
+
 ```text
 Requests 
 Untangle
@@ -269,7 +333,7 @@ Scipy
 Sympy
 ```
 
-## 六. Computer_Language_for_Future未來程式比較
+## 六. program_lang的未來
 
 易用性,Python , JS, Ruby。   
 難學的有 C ,C++,.net,Java。  
@@ -279,8 +343,6 @@ Go/Rust更具未來性，有餘力可以努力加油!
 
 回顧，學習程式設計這門課的時候，理論算法很多。導師還是提供了實戰機會，數學基礎，職業技能，軟件技術趋向，英語技能，前沿性，當時沒懂。
 我想寫總結一下Web前端和Python后端的技能，還有SampleCode實作分享! 努力寫作中! 耐心等待....
-
-## 八. About_關於
 
 我的[日記diary](diary.html)
 
