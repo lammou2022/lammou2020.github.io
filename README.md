@@ -208,18 +208,33 @@ Download Windows installer (64-bit)
 
 SQL簡單指令    
 ```cmd
-
-
-
+sqlite3 DatabaseName.db
+sqlite>CREATE TABLE COMPANY(
+   ID INT PRIMARY KEY     NOT NULL,
+   NAME           TEXT    NOT NULL,
+   AGE            INT     NOT NULL,
+   ADDRESS        CHAR(50),
+   SALARY         REAL
+);
+sqlite>INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (1, 'Paul', 32, 'California', 20000.00 );
+sqlite> SELECT * FROM COMPANY;
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+1           Paul        32          California  20000.0
+sqlite>.quit
 ```
 
 [Redis-x64-3.0.504.msi](https://github.com/microsoftarchive/redis/releases)
 
 noSQL簡單指令    
 ```cmd
-
-
-
+redis-cli
+127.0.0.1:6379> SET name "tigeryear2022" 
+OK 
+127.0.0.1:6379> GET name 
+"tigeryear2022"
+127.0.0.1:6379> exit
 ```
 
 ## 四. Web 后端
@@ -230,33 +245,20 @@ noSQL簡單指令
 
 
 The “micro” in microframework means Flask aims to keep the core simple but extensible.  
-Flask是一個使用Python編寫的Web應用微框架。基於Werkzeug WSGI工具箱和Jinja2模板引擎，使用簡單的核心，用擴充增加其他功能。 
-
-### Flask_Bookshelf例子
-
-[bookshelf](https://github.com/lammou2020/bookshelf)
-
-安裝所需模組    
-requirements.txt   
-```text
-Flask=1.1.2
-Flask-SQLAlchemy=2.4.4
-PyMySQL==0.9.2
-six==1.15.0
-Flask-Session=0.3.2
-redis=3.5.3
-PyMySQL=0.10.1
-```
-
-### virtual_env、安裝模組並運行
-
+Flask是一個使用Python編寫的Web應用微框架。基於Werkzeug WSGI工具箱和Jinja2模板引擎，使用簡單的核心，用擴充增加其他功能。   
+[doc](https://flask.palletsprojects.com/en/2.0.x/)   
+安裝模組     
 ```cmd
-git clone https://github.com/lammou2020/bookshelf
-bookshelf>python -m venv env
-bookshelf>env\scripts\activate
-(env) bookshelf>pip install -r requirements.txt
-(env) bookshelf>python bookshelf\model_cloudsql.py
-(env) bookshelf>python main.py
+pip install Flask Flask-Session redis Flask-SQLAlchemy 
+```
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
 ```
 
 ### Session會話
@@ -282,6 +284,7 @@ def get():
     return session.get('key', 'not set')
 ```
 [doc](https://flask-session.readthedocs.io/en/latest/)
+
 ### ORM資料庫操作
 Flask-SQLAlchemy A Minimal Application     
 ```python
@@ -316,6 +319,33 @@ if __name__ == '__main__':
 ```
 
 [doc](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
+
+### Flask_Bookshelf例子
+
+[bookshelf](https://github.com/lammou2020/bookshelf)
+
+安裝所需模組    
+requirements.txt   
+```text
+Flask=1.1.2
+Flask-SQLAlchemy=2.4.4
+PyMySQL==0.9.2
+six==1.15.0
+Flask-Session=0.3.2
+redis=3.5.3
+PyMySQL=0.10.1
+```
+
+### virtual_env、安裝模組並運行
+
+```cmd
+git clone https://github.com/lammou2020/bookshelf
+bookshelf>python -m venv env
+bookshelf>env\scripts\activate
+(env) bookshelf>pip install -r requirements.txt
+(env) bookshelf>python bookshelf\model_cloudsql.py
+(env) bookshelf>python main.py
+```
 
 ## 五. 常用Python Module套件
 
