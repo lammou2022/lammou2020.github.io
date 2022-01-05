@@ -6,6 +6,13 @@
 
 綜述個人對網站編程技能總結，寫一些最簡單用法，同學們分享。不足之處，請多指教!
 
+
+## An overview of HTTP
+
+![](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/fetching_a_page.png)  
+
+[An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)   
+
 ## Git/GitHub 源碼版本管理
 
 網頁存於在github.io, 是github提供的功能!  
@@ -157,7 +164,7 @@ JavaScript is a scripting language that enables you to create dynamically updati
 
 [js內容...](lecture/js_ex.html)   
 
-進階(DOM, AJAX, Async/Sync)。
+進階(DOM, AJAX, Async/Sync)。    
 DOM   
 AJAX   
 Async/Sync     
