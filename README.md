@@ -111,7 +111,7 @@ index.md
   &lt;/head&gt;
   &lt;body&gt;
     &lt;h1&gt;My first Page &lt;/h1&gt;
-    &lt;img src=a.png&gt;  
+    &lt;img src=static/a.png&gt;  
 
     &lt;p class="moreinfo"&gt;For more information see the
     &lt;a href="http://www.example.com/report"&gt;final report&lt;/a&gt;.&lt;/p&gt;
