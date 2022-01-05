@@ -186,7 +186,7 @@ jQuery是一套跨瀏覽器的JavaScript函式庫，用於簡化HTML與JavaScrip
 ## 二.  Python 易學易用
 從下圖看出易學易用。最適合快速上手的人士!講求正確,不求速度。  
 python效能是相對的,對我們普通人來,速快足够快!  
-易用性，還有Node JS。   
+易用性，還有Node JS。Go/Rust更具未來性，有餘力可以努力加油!       
 ![ease of use python](static/rust_lang.png) 
 推薦     
 👍[生產力Python課程](https://github.com/makzan/Beginning-Python-Course)
@@ -363,13 +363,7 @@ Scipy
 Sympy
 ```
 
-## 六. program_lang的未來
-
-易用性,Python , JS, Ruby。   
-難學的有 C ,C++,.net,Java。  
-Go/Rust更具未來性，有餘力可以努力加油!   
-
-## 七. Summary_總結
+## 六. Summary_總結
 
 回顧，學習程式設計這門課的時候，理論算法很多。導師還是提供了實戰機會，數學基礎，職業技能，軟件技術趋向，英語技能，前沿性，當時沒懂。
 我想寫總結一下Web前端和Python后端的技能，還有SampleCode實作分享! 努力寫作中! 耐心等待....
