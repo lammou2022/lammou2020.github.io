@@ -88,9 +88,6 @@ class ItemMoveLog(db.Model):
     item = db.relationship('Item', backref="places",lazy=True) 
     keeper=db.Column(db.String(80))  # 移動 link to _table
     place =db.Column(db.String(80))  # 放置地方
-    createdById = db.Column(db.String(255))    
-    ctime = db.Column(db.DateTime, nullable=False,default=datetime.utcnow)  #创建时间
-    utime = db.Column(db.DateTime)  #更新时间
 ```
 
 ## CRUD及查詢
