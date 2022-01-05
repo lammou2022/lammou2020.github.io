@@ -153,9 +153,15 @@ CSS is a language of style rules that we use to apply styling to our HTML conten
 
 JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. (Okay, not everything, but it is amazing what you can achieve with a few lines of JavaScript code.)
 
-基礎JS(variable, if, loop, function, JSON), 進階(DOM, AJAX, Async/Sync)。
+基礎JS(variable, if, loop, function, JSON)
 
 [js內容...](lecture/js_ex.html)   
+
+進階(DOM, AJAX, Async/Sync)。
+DOM   
+AJAX   
+Async/Sync     
+[js內容...](lecture/js_ex.html)    
 
 ### 進階應用jQuery及UI
 
