@@ -35,16 +35,20 @@ Git is a free and open source distributed version control system designed to han
 註冊Email: tigeryear2022@gmail.com   
 註冊用戶: tigeryear2022    
 
-3. github pages 實作內容   
+3. Github Pages    
 參考[Github Pages QuickStart](https://docs.github.com/cn/pages/getting-started-with-github-pages/creating-a-github-pages-site)     
 假設: tigeryear2022.github.io 
 選擇:Theme  
 自動生index.md(使用Markdown文檔指令。註:這裡用md格式, 而不是html格式)     
-A.修改主標題  
-B.插入圖片   
-C.超連結   
+學習html標籤排版      
+A.標題字  
+B.段落     
+C.插入圖片    
+D.超連結   
 
-4. 使用Git指令: clone add commit push
+4. 使用Git指令   
+
+git clone、 git add、commit、 push。   
 
 ```cmd
 (env) C:\code>git clone https://github.com/tigeryear2022/tigeryear2022.github.io
@@ -72,14 +76,15 @@ f8dbdd1..77f5e2a  main -> main
 
 5. 我第一個HTML
 
-```cmd
+文件結構
+```text
 static\a.js
 static\a.css
 static\a.png
 first.html
 index.md
 ```
-[first.html](first.html)  
+[first.html...](first.html)  
 
 &#x201C;http://www.example.com/report&#x201D;:
 
@@ -87,7 +92,15 @@ index.md
 &lt;html&gt;
   &lt;head&gt;
     &lt;script src=static/a.js&gt;&lt;/script&gt;
+    &lt;script&gt;
+       // do here;
+    &lt;/script&gt;
+
     &lt;link rel="stylesheet" href="static/a.css"&gt;
+    &lt;style&gt;
+      /* do here */
+      p.moreinfo { font-style: italic }
+    &lt;/style&gt;
   &lt;/head&gt;
   &lt;body&gt;
     &lt;h1&gt;My first Page &lt;/h1&gt;
@@ -113,7 +126,7 @@ index.md
 p.moreinfo { font-style: italic }
 </pre>
 
-[git 其他內容...](lecture/git.html) 
+[git內容...](lecture/git.html) 
 
 ![](static/markdown.png)
 
@@ -133,27 +146,29 @@ HTML is the markup language that we use to structure and give meaning to our web
 
 CSS is a language of style rules that we use to apply styling to our HTML content, for example setting background colors and fonts, and laying out our content in multiple columns.
 
-[實作內容](lecture/html5.html)   
-
-[實作內容](lecture/css3.html)   
+[html5內容...](lecture/html5.html)   
+[ccs3內容...](lecture/css3.html)   
 
 ### JavaScript
 
 JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. (Okay, not everything, but it is amazing what you can achieve with a few lines of JavaScript code.)
 
-基礎JS(if, loop, funciton, JSON), 進階(DOM, AJAX, Async/Sync)。
+基礎JS(variable, if, loop, function, JSON), 進階(DOM, AJAX, Async/Sync)。
 
-[實作內容](lecture/js_ex.html)   
+[js內容...](lecture/js_ex.html)   
 
 ### 進階應用jQuery及UI
 
 jQuery是一套跨瀏覽器的JavaScript函式庫，用於簡化HTML與JavaScript之間的操作。
 
-[實作內容](lecture/jquery_ui_ex.html)   
+[jquery內容...](lecture/jquery_ex.html)   
+[jqueryUI內容...](lecture/jquery_ui_ex.html)   
 
 ### Bootstrap
 
 自適應網頁設計(Responsive web design)，網頁自適應不同設備如, 電腦、手機、平板等設備Monitor尺寸。
+
+[Bootstrap內容...](lecture/bootstrap_ex.html)   
 
 ## 二.  Python 易學易用
 從下圖看出易學易用。最適合快速上手的人士!講求正確,不求速度。  
