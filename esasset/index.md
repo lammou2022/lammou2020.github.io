@@ -30,7 +30,7 @@ Acc 項目
 Item 資產項    
 ItemCategory 資產編號折舊定義     
 ItemMoveLog 異動記錄   
-
+![](esasset_datastructure.png)
 ## 2. 基本結構
 ```python
 # 按項目/發票定義 ACC[FA2021-xxx-001/-00[1-9]  ITEM [ACCNO]-[4271046][0001]
