@@ -278,7 +278,7 @@ OK
 127.0.0.1:6379> exit
 ```
 
-## 四. Web 后端
+## 四. Web后端(Flask)
 
 ![](static/flask_django.png)二者皆為Python網站應用框架，我主要介紹Flask。   
 
