@@ -77,8 +77,6 @@ f8dbdd1..77f5e2a  main -> main
 ```
 
 
-[git內容...](lecture/git.html) 
-
 ![](static/markdown.png)
 
 [文檔書寫 MarkDowm](https://www.markdownguide.org/basic-syntax/)  
