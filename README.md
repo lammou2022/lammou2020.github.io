@@ -46,12 +46,7 @@ Git is a free and open source distributed version control system designed to han
 參考[Github Pages QuickStart](https://docs.github.com/cn/pages/getting-started-with-github-pages/creating-a-github-pages-site)     
 假設: tigeryear2022.github.io 
 選擇:Theme  
-自動生index.md(使用Markdown文檔指令。註:這裡用md格式, 而不是html格式)     
-學習html標籤排版      
-A.標題字  
-B.段落     
-C.插入圖片    
-D.超連結   
+自動生index.md(使用Markdown文檔指令。)     
 
 4. 使用Git指令   
 
@@ -81,7 +76,28 @@ f8dbdd1..77f5e2a  main -> main
 
 ```
 
-5. 我第一個HTML
+
+[git內容...](lecture/git.html) 
+
+![](static/markdown.png)
+
+[文檔書寫 MarkDowm](https://www.markdownguide.org/basic-syntax/)  
+
+The Markdown Guide is a free and open-source reference guide that explains how to use Markdown, the simple and easy-to-use markup language you can use to format virtually any document.
+
+## 一. Web 前端
+
+參考標準[w3](https://www.w3.org/standards/webdesign/)分類，HTML&CSS , JavaScript Web APIs 
+
+![](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript/execution.png)
+
+### HTML&CSS
+
+HTML is the markup language that we use to structure and give meaning to our web content, for example defining paragraphs, headings, and data tables, or embedding images and videos in the page.
+
+CSS is a language of style rules that we use to apply styling to our HTML content, for example setting background colors and fonts, and laying out our content in multiple columns.
+
+我第一個HTML
 
 文件結構
 ```text
@@ -91,16 +107,36 @@ static\a.png
 first.html
 index.md
 ```
-[first.html...](first.html)  
 
-&#x201C;http://www.example.com/report&#x201D;:
+我要書寫內容:
+```text
+For more information see the final report. LinkTo http://www.example.com/report
+```
+HTML基本結構      
+```html
+html
+  head
+    script.
+      //
+    style.
+      //
+  body
+    //
+    內容
+```
+學習html標籤排版      
+A.標題字 h1..h4 
+B.段落 p, div    
+C.插入圖片 img   
+D.超連結 a  
 
+[first.html](first.html)    
 <pre style="color:white;">
 &lt;html&gt;
   &lt;head&gt;
     &lt;script src=static/a.js&gt;&lt;/script&gt;
     &lt;script&gt;
-       // do here;
+      // do here;
     &lt;/script&gt;
 
     &lt;link rel="stylesheet" href="static/a.css"&gt;
@@ -133,25 +169,6 @@ index.md
 p.moreinfo { font-style: italic }
 </pre>
 
-[git內容...](lecture/git.html) 
-
-![](static/markdown.png)
-
-[文檔書寫 MarkDowm](https://www.markdownguide.org/basic-syntax/)  
-
-The Markdown Guide is a free and open-source reference guide that explains how to use Markdown, the simple and easy-to-use markup language you can use to format virtually any document.
-
-## 一. Web 前端
-
-參考標準[w3](https://www.w3.org/standards/webdesign/)分類，HTML&CSS , JavaScript Web APIs 
-
-![](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript/execution.png)
-
-### HTML&CSS
-
-HTML is the markup language that we use to structure and give meaning to our web content, for example defining paragraphs, headings, and data tables, or embedding images and videos in the page.
-
-CSS is a language of style rules that we use to apply styling to our HTML content, for example setting background colors and fonts, and laying out our content in multiple columns.
 
 [html5內容...](lecture/html5.html)   
 [ccs3內容...](lecture/css3.html)   
