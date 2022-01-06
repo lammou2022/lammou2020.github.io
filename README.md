@@ -212,14 +212,13 @@ Async/Sync
 
 jQuery是一套跨瀏覽器的JavaScript函式庫，用於簡化HTML與JavaScript之間的操作。
 
-[jquery內容...](lecture/jquery_ex.html)   
-[jqueryUI內容...](lecture/jquery_ui_ex.html)   
+[jquery&UI](https://jquery.com/)   
 
 ### Bootstrap
 
 自適應網頁設計(Responsive web design)，網頁自適應不同設備如, 電腦、手機、平板等設備Monitor尺寸。
 
-[Bootstrap內容...](lecture/bootstrap_ex.html)   
+[Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/)   
 
 ## 二.  Python 易學易用
 從下圖看出易學易用。最適合快速上手的人士!講求正確,不求速度。  
