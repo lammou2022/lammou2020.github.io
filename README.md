@@ -198,15 +198,19 @@ p.moreinfo { font-style: italic }
 
 JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. (Okay, not everything, but it is amazing what you can achieve with a few lines of JavaScript code.)
 
-基礎JS(variable, if, loop, function, JSON)
+基礎JS(variable, if, loop, function )
 
-[js內容...](lecture/js_ex.html)   
+[js內容](https://www.w3schools.com/js/DEFAULT.asp)   
 
 進階(DOM, AJAX, Async/Sync)。    
 DOM   
 AJAX   
-Async/Sync     
-[js內容...](lecture/js_ex.html)    
+Async/Sync   
+JSON      
+[DOM內容](https://www.w3schools.com/js/js_htmldom.asp)    
+[Async/Sync內容](https://www.w3schools.com/js/js_callback.asp)    
+[AJAX內容](https://www.w3schools.com/js/js_ajax_intro.asp)    
+[JSON內容](https://www.w3schools.com/js/js_json_intro.asp)    
 
 ### 進階應用jQuery及UI
 
@@ -224,11 +228,10 @@ jQuery是一套跨瀏覽器的JavaScript函式庫，用於簡化HTML與JavaScrip
 從下圖看出易學易用。最適合快速上手的人士!講求正確,不求速度。  
 python效能是相對的,對我們普通人來,速快足够快!  
 易用性，還有Node JS。Go/Rust更具未來性，有餘力可以努力加油!       
-![ease of use python](static/rust_lang.png) 
-推薦     
-👍[生產力Python課程](https://github.com/makzan/Beginning-Python-Course)
+![ease of use python](static/rust_lang.png)    
+推薦👍[生產力Python課程](https://github.com/makzan/Beginning-Python-Course)
 
-[python download](https://www.python.org/downloads/windows/)
+[python 3.9.9](https://www.python.org/downloads/windows/)
 ```cmd
 Python 3.9.9 - Nov. 15, 2021
 Note that Python 3.9.9 cannot be used on Windows 7 or earlier.
@@ -243,7 +246,7 @@ Download Windows installer (64-bit)
 
 [sqlite-tools-win32-x86-3370100.zip](https://sqlite.org/download.html)
 
-SQL簡單指令    
+SQL簡單指令CREATE INSERT SELECT DELETE    
 ```cmd
 sqlite3 DatabaseName.db
 sqlite>CREATE TABLE COMPANY(
@@ -264,7 +267,8 @@ sqlite>.quit
 
 [Redis-x64-3.0.504.msi](https://github.com/microsoftarchive/redis/releases)
 
-noSQL簡單指令    
+noSQL(KEY-VALUE, HASHTABLE,MAPTABLE)     
+簡單指令SET GET HSET HGET HDEL MSET MGET FLUSHALL         
 ```cmd
 redis-cli
 127.0.0.1:6379> SET name "tigeryear2022" 
@@ -276,18 +280,16 @@ OK
 
 ## 四. Web 后端
 
-### Django/Flask網站應用框架
-
 ![](static/flask_django.png)二者皆為Python網站應用框架，我主要介紹Flask。   
-
 
 The “micro” in microframework means Flask aims to keep the core simple but extensible.  
 Flask是一個使用Python編寫的Web應用微框架。基於Werkzeug WSGI工具箱和Jinja2模板引擎，使用簡單的核心，用擴充增加其他功能。   
 [doc](https://flask.palletsprojects.com/en/2.0.x/)   
-安裝模組     
+安裝擴充模組     
 ```cmd
 pip install Flask Flask-Session redis Flask-SQLAlchemy 
 ```
+flask_ex.py    
 ```python
 from flask import Flask
 
@@ -298,9 +300,14 @@ def hello_world():
     return "<p>Hello, World!</p>"
 ```
 
+```cmd
+python flask_ex.py
+```
+
 ### Session會話
 
 Flask-Session & redis    
+flask_redis_ex.py     
 ```python
 from flask import Flask, session
 from flask.ext.session import Session
@@ -320,10 +327,16 @@ def set():
 def get():
     return session.get('key', 'not set')
 ```
+```cmd
+python flask_redis_ex.py
+```
+
 [doc](https://flask-session.readthedocs.io/en/latest/)
 
 ### ORM資料庫操作
 Flask-SQLAlchemy A Minimal Application     
+
+orm_ex.py    
 ```python
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -353,6 +366,10 @@ if __name__ == '__main__':
     #[<User u'admin'>, <User u'guest'>]
     User.query.filter_by(username='admin').first()
     #<User u'admin'>
+```
+
+```cmd
+python orm_ex.py
 ```
 
 [doc](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
