@@ -115,20 +115,20 @@ For more information see the final report. LinkTo http://www.example.com/report
 HTML基本結構      
 ```html
 html
-  head
-    script.
-      //
-    style.
-      //
-  body
-    //
-    內容
+    head
+        script.
+          //
+        style.
+          //
+    body
+        //
+        內容
 ```
 學習html標籤排版      
-A.標題字 h1..h4 
-B.段落 p, div    
-C.插入圖片 img   
-D.超連結 a  
+A.標題字 h1..h4    
+B.段落 p, div      
+C.插入圖片 img     
+D.超連結 a    
 
 [first.html](first.html)    
 <pre style="color:white;">
@@ -168,10 +168,6 @@ D.超連結 a
 <pre style="color:white;">
 p.moreinfo { font-style: italic }
 </pre>
-
-
-[html5內容...](lecture/html5.html)   
-[ccs3內容...](lecture/css3.html)   
 
 ### JavaScript
 
