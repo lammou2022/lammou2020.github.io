@@ -198,22 +198,26 @@ p.moreinfo { font-style: italic }
 
 JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. (Okay, not everything, but it is amazing what you can achieve with a few lines of JavaScript code.)
 
-基礎JS(variable, if, loop, function )
-[廖雪峰 JavaScript 教程（202007）](https://www.bookstack.cn/read/liaoxuefeng-JavaScript-2020/cc19bec7412798fa.md)     
+基礎JS(variable, if, loop, function )         
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources
+
+[廖雪峰 JavaScript 教程（202007）](https://www.bookstack.cn/read/liaoxuefeng-JavaScript-2020/cc19bec7412798fa.md) 
+
 [现代 JavaScript 教程中文版](https://www.bookstack.cn/read/zh.javascript.info/7d8aef416b0f93b9.md)
+
 https://www.bookstack.cn/read/es6/readme.md   
+
 https://www.bookstack.cn/read/es6-3rd/spilt.1.docs-let.md     
+
 https://www.bookstack.cn/read/es2016-es2017/8f14492603714635.md   
+
 https://www.bookstack.cn/read/es2018-es2019/78052f44af846cbd.md       
+
+https://www.bookstack.cn/books/front-end-database
 
 
 [js內容](https://www.w3schools.com/js/DEFAULT.asp)   
-
-進階(DOM, AJAX, Async/Sync)。    
-DOM   
-AJAX   
-Async/Sync   
-JSON      
 [DOM內容](https://www.w3schools.com/js/js_htmldom.asp)    
 [Async/Sync內容](https://www.w3schools.com/js/js_callback.asp)    
 [AJAX內容](https://www.w3schools.com/js/js_ajax_intro.asp)    
