@@ -218,7 +218,7 @@ jQuery是一套跨瀏覽器的JavaScript函式庫，用於簡化HTML與JavaScrip
 
 [jquery&UI](https://jquery.com/)   
 
-```js
+<pre style="color:white;">
 &lt;script src=https://code.jquery.com/jquery-3.6.0.min.js&gt;&lt;/script&gt;
 &lt;script&gt;
 $.get( "static/a.json", function( data ) {
@@ -227,7 +227,7 @@ $.get( "static/a.json", function( data ) {
     .append( "Time: " + data.time ); //  2pm
 }, "json" );
 &lt;/script&gt;
-```
+</pre>
 
 ### Bootstrap
 
