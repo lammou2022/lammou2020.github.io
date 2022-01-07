@@ -218,6 +218,17 @@ jQuery是一套跨瀏覽器的JavaScript函式庫，用於簡化HTML與JavaScrip
 
 [jquery&UI](https://jquery.com/)   
 
+```js
+&lt;script src=https://code.jquery.com/jquery-3.6.0.min.js&gt;&lt;/script&gt;
+&lt;script&gt;
+$.get( "static/a.json", function( data ) {
+  $( "body" )
+    .append( "Name: " + data.name ) // John
+    .append( "Time: " + data.time ); //  2pm
+}, "json" );
+&lt;/script&gt;
+```
+
 ### Bootstrap
 
 自適應網頁設計(Responsive web design)，網頁自適應不同設備如, 電腦、手機、平板等設備Monitor尺寸。
