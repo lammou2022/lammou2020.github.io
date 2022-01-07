@@ -199,6 +199,13 @@ p.moreinfo { font-style: italic }
 JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. (Okay, not everything, but it is amazing what you can achieve with a few lines of JavaScript code.)
 
 基礎JS(variable, if, loop, function )
+[廖雪峰 JavaScript 教程（202007）](https://www.bookstack.cn/read/liaoxuefeng-JavaScript-2020/cc19bec7412798fa.md)     
+[现代 JavaScript 教程中文版](https://www.bookstack.cn/read/zh.javascript.info/7d8aef416b0f93b9.md)
+https://www.bookstack.cn/read/es6/readme.md   
+https://www.bookstack.cn/read/es6-3rd/spilt.1.docs-let.md     
+https://www.bookstack.cn/read/es2016-es2017/8f14492603714635.md   
+https://www.bookstack.cn/read/es2018-es2019/78052f44af846cbd.md       
+
 
 [js內容](https://www.w3schools.com/js/DEFAULT.asp)   
 
@@ -215,7 +222,7 @@ JSON
 ### 進階應用jQuery及UI
 
 jQuery是一套跨瀏覽器的JavaScript函式庫，用於簡化HTML與JavaScript之間的操作。
-
+[You Don't Need jQuery中文版](https://www.bookstack.cn/read/You-Dont-Need-jQuery/ch8.md)
 [jquery&UI](https://jquery.com/)   
 
 <pre style="color:white;">
@@ -237,25 +244,23 @@ $.get( "static/a.json", function( data ) {
 
 ## 二.  Python 易學易用
 從下圖看出易學易用。最適合快速上手的人士!講求正確,不求速度。  
-python效能是相對的,對我們普通人來,速快足够快!  
+python效能是相對的,對我們普通人來,速快足够快!     
 易用性，還有Node JS。Go/Rust更具未來性，有餘力可以努力加油!       
 ![ease of use python](static/rust_lang.png)    
 推薦👍[生產力Python課程](https://github.com/makzan/Beginning-Python-Course)
 
-[python 3.9.9](https://www.python.org/downloads/windows/)
+[安裝python 3.9.9 模組管理程式pip ](https://www.python.org/downloads/windows/)
 ```cmd
 Python 3.9.9 - Nov. 15, 2021
 Note that Python 3.9.9 cannot be used on Windows 7 or earlier.
 Download Windows installer (64-bit)
 ```
 
-自帶模組管理程式: pip
+## 三. 資料庫MySQL/SQLite,Redis     
 
-## 三. 資料庫MySQL/SQLite,Redis
+![](static/database_category.png)     
 
-![](static/database_category.png)
-
-[sqlite-tools-win32-x86-3370100.zip](https://sqlite.org/download.html)
+[sqlite-tools-win32-x86-3370100.zip](https://sqlite.org/download.html)     
 
 SQL簡單指令CREATE INSERT SELECT DELETE    
 ```cmd
@@ -309,6 +314,10 @@ app = Flask(__name__)
 @app.route("/")
 def hello_world():
     return "<p>Hello, World!</p>"
+
+# the application.
+if __name__ == '__main__':
+    app.run( host="0.0.0.0",port=8080, debug=True)
 ```
 
 ```cmd
@@ -337,6 +346,11 @@ def set():
 @app.route('/get/')
 def get():
     return session.get('key', 'not set')
+
+# the application.
+if __name__ == '__main__':
+    app.run( host="0.0.0.0",port=8080, debug=True)
+
 ```
 ```cmd
 python flask_redis_ex.py
@@ -380,18 +394,18 @@ if __name__ == '__main__':
 ```
 
 ```cmd
-python orm_ex.py
+python orm_ex.py  
 ```
 
 [doc](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
 
-### Flask_Bookshelf例子
+### 綜合應用例子    
 
-[bookshelf](https://github.com/lammou2020/bookshelf)
+[bookshelf](https://github.com/lammou2020/bookshelf)  
 
-安裝所需模組    
+安裝所需模組      
 requirements.txt   
-```text
+```text 
 Flask=1.1.2
 Flask-SQLAlchemy=2.4.4
 PyMySQL==0.9.2
@@ -400,9 +414,16 @@ Flask-Session=0.3.2
 redis=3.5.3
 PyMySQL=0.10.1
 ```
-
-### virtual_env、安裝模組並運行
-
+建立虛擬獨立運行環境        
+python -m venv env    
+啟動    
+env\scripts\activate      
+安裝模組    
+pip install -r requirements.txt       
+創建資料庫    
+python bookshelf\model_cloudsql.py      
+運行    
+python main.py    
 ```cmd
 git clone https://github.com/lammou2020/bookshelf
 bookshelf>python -m venv env
