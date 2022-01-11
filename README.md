@@ -454,7 +454,33 @@ openpyxl
 Scipy
 Sympy
 ```
-
+Installation
+```cmd
+$ pip install openpyxl
+$ pip install pillow
+```
+read_xl.py
+```python
+from openpyxl import load_workbook
+wb = load_workbook(filename = 'empty_book.xlsx')
+col_s=[]
+for sn_ in wb.sheetnames:
+  ws=web[sn_]
+  for cidx in range(65,90):
+    c_name=ws[f"{chr(cidx)}{6}"].value
+    if c_name==None: break
+    col_s.append(c_name)
+print(col_s)
+```
+write_xl.py
+```python
+from openpyxl import Workbook
+out_wb = Workbook()
+out_ws = wb.active
+data=[1,2,3,4,5]
+out_ws.append(data)
+wb.save('out.xlsx')
+```
 ## 六. Summary_總結
 
 回顧，學習程式設計這門課的時候，理論算法很多。導師還是提供了實戰機會，數學基礎，職業技能，軟件技術趋向，英語技能，前沿性，當時沒懂。
