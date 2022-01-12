@@ -455,21 +455,102 @@ Scipy
 Sympy
 ```
 
-<h3>Requests</h3>
+```python
+#2.1 寫文字檔:
+def out_txt(msg):
+    print(msg)
+    with open(f"./news_title.txt", 'a',encoding='utf-8') as the_file:
+        the_file.write(str(msg))
+        the_file.write('\n')
+out_txt("a")        
+out_txt("b")        
+out_txt("c")        
+```
 
-<h3>BeautifulSoup4</h3>
 
-<h3>Selenium</h3>
+<h3>Requests & BeautifulSoup4</h3>
+[Quick start](https://pypi.org/project/beautifulsoup4/)
+
+```python
+import requests
+_url=f" https://xml.smg.gov.mo/c_actual_brief.xml "
+_res = requests.get(_url)
+_res.encoding = "utf-8"
+print(_res.text)
+```
+
+```python
+from bs4 import BeautifulSoup
+import requests
+_url=f"http://www.macaodaily.com/html/2020-12/20/node_1.htm"
+_res = requests.get(_url)
+_res.encoding = "utf-8"      #_res.text 完整HTML內容, 包含標籤指今文字, 不是直觀宜懂
+soup = BeautifulSoup(_res.text, "html.parser")
+links = soup.select("#all_article_list a")   #需學習CSS設定篩選選擇條件,篩選出新聞標題
+for link in links:
+    print(link.getText() )
+```
 
 <h3>Numpy</h3>
+[install](https://numpy.org/install/)
 
 <h3>Pandas</h3>
+[Getting_started](https://pandas.pydata.org/getting_started.html)
+```python
+
+```
 
 <h3>python-docx</h3>
+[Release v0.8.11 (Installation)](https://python-docx.readthedocs.io/en/latest/)
+```python
+from docx import Document
+from docx.shared import Inches
+
+document = Document()
+
+document.add_heading('Document Title', 0)
+
+p = document.add_paragraph('A plain paragraph having some ')
+p.add_run('bold').bold = True
+p.add_run(' and some ')
+p.add_run('italic.').italic = True
+
+document.add_heading('Heading, level 1', level=1)
+document.add_paragraph('Intense quote', style='Intense Quote')
+
+document.add_paragraph(
+    'first item in unordered list', style='List Bullet'
+)
+document.add_paragraph(
+    'first item in ordered list', style='List Number'
+)
+
+document.add_picture('monty-truth.png', width=Inches(1.25))
+
+records = (
+    (3, '101', 'Spam'),
+    (7, '422', 'Eggs'),
+    (4, '631', 'Spam, spam, eggs, and spam')
+)
+
+table = document.add_table(rows=1, cols=3)
+hdr_cells = table.rows[0].cells
+hdr_cells[0].text = 'Qty'
+hdr_cells[1].text = 'Id'
+hdr_cells[2].text = 'Desc'
+for qty, id, desc in records:
+    row_cells = table.add_row().cells
+    row_cells[0].text = str(qty)
+    row_cells[1].text = id
+    row_cells[2].text = desc
+
+document.add_page_break()
+document.save('demo.docx')
+```
 
 <h3>openopxl</h3>
 
-Installation
+[Installation](https://openpyxl.readthedocs.io/en/stable/#)
 ```cmd
 $ pip install openpyxl
 $ pip install pillow
