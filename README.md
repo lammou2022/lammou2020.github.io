@@ -529,7 +529,50 @@ for link in links:
 <h3>Pandas</h3>
 [Getting_started](https://pandas.pydata.org/getting_started.html)
 ```python
+#  id 性別 年齡 BMI A內下	A外下	A上下	A1	B內下	B外下	B上下	B1  C內下	C外下	C上下	C1  
+import pandas as pd
+df=pd.read_excel('data/DATA.xlsx',sheet_name='data',engine='openpyxl',index_col=0)   
+df.head()
+df.dtypes
+fns="A內下	A外下	A上下	A1	B內下	B外下	B上下	B1  C內下	C外下	C上下	C1".split("\t")
+for fn in fns:
+    df1 = df[df[fn]=="X"]
+    mean=round(df1["年齡"].mean(),2)
+    std=round(df1["年齡"].std(),2)
+    cnt=df1.shape[0]
+    print(f"{fn}  有{cnt}筆年齡: {mean}+-{std}")
+    M_F=df1["性別"].value_counts()
+    M=M_F["M"]
+    Mr=round(M/cnt,4)
+    F=M_F["F"]
+    Fr=round(F/cnt,4)
+    print(f"{M} {Mr}  {F} {Fr}")
+    displaySer(M_F)
 
+count=0
+for age in set(df["年齡"]):
+    r=df[df["年齡"]==age].shape[0] 
+    print(f"{age}  {r}")
+    count+=r
+print(count)
+
+df1 = df[df["性別"]=="F"]
+print(df1.shape[0])年齡
+df1=  df1=="X" 
+sum_s=df1.sum(axis=0)
+#display(sum_s)
+
+df1 = df[(df["BMI"]>=23) & (df["BMI"]<25)]
+print(df1.shape[0])
+df1=  df1=="X" 
+sum_s=df1.sum(axis=0)
+#display(sum_s)
+
+df1 = df[(df["年齡"]>=75) & (df[""]<90)]
+print(df1.shape[0])
+df1=  df1=="X" 
+sum_s=df1.sum(axis=0)
+display(sum_s)
 ```
 
 <h3>python-docx</h3>
