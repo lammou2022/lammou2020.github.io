@@ -223,10 +223,25 @@ moreinfo 類的段落p 內部所有內容使用 font-style: italic 斜體字.
 [解題](diner_ans.html)      
 
 自定義Html tag    
-[自定義標籤](diner_ready.html)      
-css/style.css
-```css
-/*片段*/
+[ex0](diner_ready.html)      
+
+[ex1](diner_ex1.html)      
+
+<pre style="color:white;">
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+orange,apple {
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  border-style: solid;
+  border-width: 2px 4px 15px 4px;
+  height: 60px;
+  width: 60px;
+  position: relative;
+  margin: 20px 10px;
+}
+
 apple {
   background: #e41919;
   border-color: #ab1212;
@@ -247,24 +262,20 @@ pickle {
   border-width: 2px 2px 9px 2px;
   margin: 20px 10px;
 }
-```
-<pre>
-          &lt;!-- coding here --&gt;
-            &lt;orange&gt;&lt;/orange&gt;
-            &lt;orange class="small"&gt;&lt;/orange&gt;
-            &lt;plate class="" &gt;
-              &lt;orange&gt;&lt;/orange&gt;
-              &lt;orange class="green"&gt;&lt;/orange&gt;
-              &lt;orange&gt;&lt;/orange&gt;
-            &lt;/plate&gt;
-            &lt;bento&gt;
-              &lt;pickle class="strobe"&gt;&lt;/pickle&gt;
-            &lt;/bento&gt;
-            &lt;plate  id="fancy"&gt;
-              &lt;apple&gt;&lt;/apple&gt;
-            &lt;/plate&gt;
-          &lt;!-- end here --&gt;
-
+orange,apple,pickle {
+  box-shadow: 0px 5px 0px rgba(0,0,0,.2);
+  display: inline-block;
+  margin: 0 10px;
+  height: 60px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;pickle&gt;&lt;/pickle&gt;
+&lt;orange&gt;&lt;/orange&gt;
+&lt;apple&gt;&lt;/apple&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </pre>
 
 [cs50 2020](https://www.youtube.com/watch?v=YoXxevp1WRQ&list=PLhQjrBD2T382_R182iC2gNZI9HzWFMC_8)
