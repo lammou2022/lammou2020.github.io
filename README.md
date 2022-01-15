@@ -73,9 +73,7 @@ Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 f8dbdd1..77f5e2a  main -> main
-
 ```
-
 
 ![](static/markdown.png)
 
@@ -117,17 +115,17 @@ index.md
 ```text
     粵華南虎誕孖仔祝元旦
     
-                   #&@,(#                                                       
-               *(#/..(   &/%                                                    
-               @(#@.(   %  @   @ *&@%##(////////*.                              
-                 &#%%#@@ ,  .,*/   @    @   ((  @ ,& @@/                        
-                        *@  @   #, (  , (  & (  *  & *.& %&                     
-                         .&   / @  &  @ .  @ / &   * @ (*%,/ @/          *&     
-                          @@/ ( / *% ,@ %(%@&&@@(@  , ,/&    (#% / //%@, &      
-                         & (###@ .@.         # ..,(( ,,, @.                     
-                        %   %   & */          ,. &     .@#&,                    
-                      ,@%&*      &,@        ,& @,       %.,@                    
-                   #%#@@,      &*@%/     .&@@#      .##* @    
+     #&@,(#                                                       
+ *(#/..(   &/%                                                    
+ @(#@.(   %  @   @ *&@%##(////////*.                              
+   &#%%#@@ ,  .,*/   @    @   ((  @ ,& @@/                        
+          *@  @   #, (  , (  & (  *  & *.& %&                     
+           .&   / @  &  @ .  @ / &   * @ (*%,/ @/          *&     
+            @@/ ( / *% ,@ %(%@&&@@(@  , ,/&    (#% / //%@, &      
+           & (###@ .@.         # ..,(( ,,, @.                     
+          %   %   & */          ,. &     .@#&,                    
+        ,@%&*      &,@        ,& @,       %.,@                    
+     #%#@@,      &*@%/     .&@@#      .##* @    
 
     二○二二年是虎年，華南虎雙胞胎慶祝元旦。廣東省林業局今日發佈，二○二一年十二月三十一日二十三時○二分和二十六分，廣東粵北華南虎省級自然保護區管理處韶關華南虎繁育研究基地華南虎媽媽“夢夢”順利產下兩隻華南虎幼崽，這也是繼去年三月和九月迎來“圓圓”和“慶慶”兩隻雌性虎寶寶後，該繁育研究基地年內再次“迎新”。兩隻華南虎寶寶的出生也創下“一年三胎四仔”的高產紀錄。
 
@@ -604,14 +602,76 @@ for link in links:
     print(link.getText() )
 ```
 
-<h3>Numpy</h3>
+<h3>Numpy Sympy MatPlotLib</h3>
 [install](https://numpy.org/install/)
+```python
+from sympy import lambdify
+import numpy as np
+from matplotlib.figure import Figure
+a=np.random.choice(range(4,10), 2) #list
+b,c,d=np.random.choice([2,4,8],3)
+expr= k*x+b
+lam_x = lambdify(x, expr, modules=['numpy'])
+x_vals = np.linspace(-5, 5, 10)
+y_vals = lam_x(x_vals)
+fig = Figure()
+fig.set_figheight(3)
+fig.set_figwidth(3)            
+ax = fig.subplots()
+ax.plot(x_vals, y_vals)
+ax.axhline(0, color='black')
+ax.axvline(0, color='black')            
+fig.savefig(os.getcwd()+"\\static\\"+TE["PlotImg"])
+#Or Save it to a temporary buffer.
+#buf = BytesIO()
+#fig.savefig(buf, format="png")
+#data = base64.b64encode(buf.getbuffer()).decode("ascii")
+#return f"<img src='data:image/png;base64,{data}'/>"        
+
+def plotTriangle(t,BAngle,li,Path_):
+    B, C, A = t.vertices #頂点
+    AB, BC, CA = Segment(A, B), Segment(B, C), Segment(C, A) #辺の設定 右辺は ABC.sidesと同等
+    a, b, c = BC.length, CA.length, AB.length #辺の長さ
+    opposides = { A: BC, B: CA, C: AB } #頂点に対する対辺(opposite side) #print(AB,BC,CA ,*t.sides)    
+    # Figure and Axes
+    fig=Figure()
+    fig.set_figheight(3)
+    fig.set_figwidth(3)
+    ax=fig.subplots()    
+    #plt.close('all')
+    #fig = plt.figure()
+    #ax = fig.add_subplot(1, 1, 1)
+    ax.set_aspect('equal')      #ax.grid()
+    ax.set_axis_off() #軸の非表示
+    ax.add_patch(plt.Polygon(t.vertices, fill=False))  
+    ax.plot(*zip(*t.vertices), 'o') #'ro'
+    ax.text(*B, '$\mathrm{B}$', ha='right', va='top') 
+    ax.text(*C, '$\mathrm{C}$', ha='left', va='top')
+    ax.text(*A, '$\mathrm{A}$', ha='left', va='bottom')
+    squar_side_len=(a / 10)
+    c1=Point(C[0],C[1]+squar_side_len)
+    c2=Point(C[0]-squar_side_len,C[1]+squar_side_len)
+    c3=Point(C[0]-squar_side_len,C[1])
+    ax.add_patch(plt.Polygon([C,c1,c2,c3], fill=False))
+    ax.text(*BC.midpoint, '$\mathrm{a } $', ha='right', va='top')
+    ax.text(*CA.midpoint, '$\mathrm{b } $', ha='left', va='top')
+    ax.text(*AB.midpoint, '$\mathrm{c } $', ha='left', va='bottom')  
+    #Arc Plot
+    if BAngle != None:
+        d=np.arange(start=0,stop=BAngle,step=1)
+        rad=np.deg2rad(d)
+        r=(a/10)
+        xc = r*np.cos(rad)
+        yc = r*np.sin(rad)
+        ax.plot(xc,yc,color=[20/255,20/255,20/255],linestyle='-')   
+        ax.text(B[0]+r,B[1]+0.04,f'${BAngle}^o$')
+    #plt.show()
+    fig.savefig(os.getcwd()+"\\static\\"+Path_) 
+    return Path_       
+```
 
 <h3>Pandas</h3>
 [Getting_started](https://pandas.pydata.org/getting_started.html)
-```python
-
-```
 
 <h3>python-docx</h3>
 [Release v0.8.11 (Installation)](https://python-docx.readthedocs.io/en/latest/)
