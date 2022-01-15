@@ -194,6 +194,10 @@ D.超連結 a
 p.moreinfo { font-style: italic }
 </pre>
 
+<h3> Selector </h3>
+[diner](diner.html)     
+[解題](diner_ans.html)      
+
 https://www.bookstack.cn/read/html-tutorial/spilt.1.docs-elements.md
 
 https://www.bookstack.cn/read/liyanhui-html-css/0.md
