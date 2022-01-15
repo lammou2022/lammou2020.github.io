@@ -85,6 +85,13 @@ The Markdown Guide is a free and open-source reference guide that explains how t
 
 ## 一. Web 前端(html,css,js)
 
+HTML 的出現有一個好漂亮的名稱， 相對text,word文本來說，叫做"超文本" , link "超連結"。網絡普及化之后，現在沒人再講了。   
+HTML 說明了因應互联網及瀏覽器出現，需要一種基於標籤(註XML) 的文本排版方式。   
+例:
+&lt;h1&gt; 表示標題開始，結束。 h1,h2,h3,h4 &lt;/h1&gt;         
+&lt;p&gt; 表示段落開始，結束。  &lt;/p&gt;          
+都可以同MS Word對應!       
+
 參考標準[w3](https://www.w3.org/standards/webdesign/)分類，HTML&CSS , JavaScript Web APIs 
 
 ![](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript/execution.png)
@@ -142,11 +149,13 @@ html
         //
         內容
 ```
-學習html標籤排版      
+
+學習html標準標籤排版功能      
 A.標題字 h1..h4    
 B.段落 p, div      
 C.插入圖片 img     
-D.超連結 a    
+D.超連結 a     
+E.code pre   
 
 [first.html](first.html)    
 <pre style="color:white;">
@@ -194,9 +203,72 @@ D.超連結 a
 p.moreinfo { font-style: italic }
 </pre>
 
-<h3> Selector </h3>
-[diner](diner.html)     
+CSS   
+tag
+.class_name /tag.class_name        
+#id_name     
+xpath     
+
+ex:   
+
+moreinfo 類的段落p 內部所有內容使用 font-style: italic 斜體字.   
+這里寫css清楚目標tag class id 來改變顯示字樣或圖型等效果。
+對分析網頁結構，尋找目標內容自動分析數據，及自動填表等功能有好大幫助。        
+有個css選擇器練習。高手可以試下。          
+
+<h3>css Selector </h3>
+
+[diner](https://flukeout.github.io/)   
+[題目](diner.html)     
 [解題](diner_ans.html)      
+
+自定義Html tag    
+[自定義標籤](diner_ready.html)      
+css/style.css
+```css
+/*片段*/
+apple {
+  background: #e41919;
+  border-color: #ab1212;
+}
+
+orange {
+  background: orange;
+  border-color: #bd6e07;
+}
+
+pickle {
+  background: #179837;
+  width: 25px;
+  border-radius: 30px;
+  display: inline-block;
+  position: relative;
+  border: solid 2px #025a18;
+  border-width: 2px 2px 9px 2px;
+  margin: 20px 10px;
+}
+```
+<pre>
+          &lt;!-- coding here --&gt;
+            &lt;orange&gt;&lt;/orange&gt;
+            &lt;orange class="small"&gt;&lt;/orange&gt;
+            &lt;plate class="" &gt;
+              &lt;orange&gt;&lt;/orange&gt;
+              &lt;orange class="green"&gt;&lt;/orange&gt;
+              &lt;orange&gt;&lt;/orange&gt;
+            &lt;/plate&gt;
+            &lt;bento&gt;
+              &lt;pickle class="strobe"&gt;&lt;/pickle&gt;
+            &lt;/bento&gt;
+            &lt;plate  id="fancy"&gt;
+              &lt;apple&gt;&lt;/apple&gt;
+            &lt;/plate&gt;
+          &lt;!-- end here --&gt;
+
+</pre>
+
+[cs50 2020](https://www.youtube.com/watch?v=YoXxevp1WRQ&list=PLhQjrBD2T382_R182iC2gNZI9HzWFMC_8)
+[cs50 html css javascript](https://www.youtube.com/watch?v=Pawk7o9Tsds)
 
 https://www.bookstack.cn/read/html-tutorial/spilt.1.docs-elements.md
 
