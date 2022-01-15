@@ -750,8 +750,27 @@ data=[1,2,3,4,5]
 out_ws.append(data)
 out_wb.save('out.xlsx')
 ```
+## 六. grid_v2 table2csv combobox
 
-## 六. Summary_總結
+```html 
+
+```
+
+```js
+/*mysql async await*/
+
+```
+```js
+/*sqlite*/
+
+```
+```python
+# flask_sqlalshemy
+
+```
+
+
+## 七. Summary_總結
 
 回顧，學習程式設計這門課的時候，理論算法很多。導師還是提供了實戰機會，數學基礎，職業技能，軟件技術趋向，英語技能，前沿性，當時沒懂。
 我想寫總結一下Web前端和Python后端的技能，還有SampleCode實作分享! 努力寫作中! 耐心等待....
