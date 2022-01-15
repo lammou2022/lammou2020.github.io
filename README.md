@@ -202,16 +202,16 @@ E.code pre
 <pre style="color:white;">
 p.moreinfo { font-style: italic }
 </pre>
+有些段落特別顯示斜體。  
+moreinfo 類的段落p 內部所有內容使用 font-style: italic 斜體字.   
 
-CSS   
-tag
-.class_name /tag.class_name        
+CSS定義顯示模式   
+tag    
+.class_name或tag.class_name        
 #id_name     
 xpath     
 
 ex:   
-
-moreinfo 類的段落p 內部所有內容使用 font-style: italic 斜體字.   
 這里寫css清楚目標tag class id 來改變顯示字樣或圖型等效果。
 對分析網頁結構，尋找目標內容自動分析數據，及自動填表等功能有好大幫助。        
 有個css選擇器練習。高手可以試下。          
@@ -221,12 +221,10 @@ moreinfo 類的段落p 內部所有內容使用 font-style: italic 斜體字.
 [diner](https://flukeout.github.io/)   
 [題目](diner.html)     
 [解題](diner_ans.html)      
-
-自定義Html tag    
-[ex0](diner_ready.html)      
+[ex0 簡化版](diner_ready.html)      
 
 [ex1 簡化版](diner_ex1.html)      
-
+自定義apple oragne pickle樣式     
 <pre style="color:white;">
 &lt;html&gt;
 &lt;head&gt;
