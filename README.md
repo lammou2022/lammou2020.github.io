@@ -750,23 +750,168 @@ data=[1,2,3,4,5]
 out_ws.append(data)
 out_wb.save('out.xlsx')
 ```
-## 六. grid_v2 table2csv combobox
+## 六. gird_v
+grid_v2 table2csv combobox 2list
 
-```html 
-
+```pug 
+extends ./base.pug
+block content
+  script(src='/javascripts/cool/grid_v2.js')
+  script(src='/javascripts/cool/table2csv.js')
+  .btn-group      
+    a(href="#", class='btn btn-primary btn-sm')#exportcsv  下戴CSV  
+    a(href="#", class='btn btn-primary btn-sm')#editbtn  編輯  
+    a(href="#", class='btn btn-primary btn-sm')#readmodebtn 唯讀  
+    a(href="#", class='btn btn-primary btn-sm')#savebtn 儲存  
+div#tableContent  
+    table.table
+      tr 
+        td id
+        td#MA_H col_1
+        td#MB_H col_2
+        td#MC_H col_3
+      each r in data
+        tr
+          td= r.id
+          td.M(id=`MA_col-1_${r.id}`)= r.col_1
+          td.M(id=`MA_col-2_${r.id}`)= r.col_2
+          td.M(id=`MA_col-3_${r.id}`)= r.col_3
+  script(type="text/javascript").
+    var PostUrl='/api/JSON/updateSet' ;    
+    $(document).ready(function(){
+    	BindingFunctions("editbtn","savebtn",'readmodebtn');
+    	BindingHead_EditMode(['MA_H','MB_H','MC_H']);
+    	BindingFieldDefsIntegerFields({'MB':'INT','MF':'INT','MG':'INT'});
+    	GenOriginalData();
+       $("#exportcsv").on('click', function(event) {
+        var args = [$('#tableContent>table'), 'export0.csv'];
+        exportTableToCSV.apply(this, args);
+      });
+    });    
 ```
-
+```js
+/*api.js*/
+const express = require('express');
+const router = express.Router();
+function getSQLiteModel () { return require(`./model-sqlite`);}
+function getModel () { return require(`./model-mysql-pool`); }
+router.get('/grid', require('connect-ensure-login').ensureLoggedIn(), (req, Response, next) => {
+    getSQLiteModel().list((err,data)=>{
+        Response.render('applyformMng/grid.pug', {
+            profile:req.user,
+            data:data
+       });
+    });
+});
+router.post('/api/JSON/updateSet/:rowid', images.multer.array('upload',16),    require('connect-ensure-login').ensureLoggedIn(), (req, Response, next) => {
+  let data=req.body
+  getSQLiteModel().UpdateDataSet(data,(err,result)=>{
+      if(err){return Response.end(err.message) }
+      Response.end(result)
+  });
+});
+/*model_sqlite.js*/
+var sqlite3 = require('sqlite3').verbose()
+var db = new sqlite3.Database('bookshelf.db')
+function list(cb) {
+  db.serialize(function () {
+      db.all('SELECT * FROM appform;', function (err, rows) {
+          if (err) { cb(err); return; }
+          cb(null, rows);
+    })
+  })
+}
+function UpdateDataSet(DataSet,cb) {
+  db.serialize(function () {
+    for(let prop in DataSet)
+    {
+        let fieldnamelist=[], valuelist=[];
+        for(let fieldname in DataSet[prop])
+        {
+          fieldnamelist.push(`${fieldname}=?`);
+          valuelist.push(DataSet[prop][fieldname]);
+        }
+        valuelist.push(prop);
+        db.run(`UPDATE appform SET ${fieldnamelist.join(",")}  WHERE id=?`,valuelist,function(err){
+          if(err){ cb(err);return; }
+          cb(null,`updated!${this.changes}`)
+        });
+    }
+  })
+}
+module.exports = {
+    list: list,
+    UpdateDataSet: UpdateDataSet,
+}    
+```
 ```js
 /*mysql async await*/
-
-```
-```js
-/*sqlite*/
-
+const mysql = require('mysql');
+const options = {
+    host: '127.0.0.1',
+    user: 'user',
+    password: 'pass',
+    database: 'db'
+};
+const pool = mysql.createPool(options);
+function list(cb) {
+    pool.getConnection(function (err, connection) {
+        if(err){cb(err);return;}
+        connection.query(
+            'SELECT * FROM appform; ',[],
+            (err, results) => {
+                if (err) { cb(err); return; }
+                cb(null, results);
+                connection.release();
+            }
+        );
+    });
+}
+async function UpdateDataSet(DataSet, cb) {
+    pool.getConnection(async function (err, connection) {
+        if (err) { cb(err); return; }
+        let cnt = 0;
+        for(let prop in DataSet)
+        {
+            cnt += await new Promise((resolve, reject) => {
+                connection.query(`update appform set ? where id=?;`, [DataSet[prop], actcid], (err, res) => {
+                    if (err) { console.log(err); reject(err); }
+                    resolve(100);
+                });
+            });
+        }
+        cb(null, Math.floor(cnt / 100));
+        connection.release();
+        //let alist = Object.keys(aObj);
+        //for (let i = 0; i < alist.length; i++) { let val = aObj[alist[i]]; }
+    });
+}
 ```
 ```python
 # flask_sqlalshemy
-
+# crud.py
+@crud.route('/api/JSON/updateSet/<nothing>', methods=['GET', 'POST'])
+@login_required_auth
+def itemJsonUpdateSet(nothing):
+    data=request.get_json()
+    for itemid in data:
+        if 'regSDate' in data[itemid]:
+            data[itemid]['regSDate']=datetime.strptime(data[itemid]['regSDate'], '%Y-%m-%d')
+        if 'itemno' in data:   
+            if data[itemid]["itemno"]=="" or data[itemid]["itemno"]=="None" or data[itemid]["itemno"]==None:
+                data[itemid]["itemno"]=None
+            else:
+                pass
+    book = get_model().updateItem_DataSet(data)
+    return "Update !"
+# Model.py
+def updateItem_DataSet(data):
+    for id in data:
+        acc = Item.query.get(id)
+        for k, v in data[id].items():
+            setattr(acc, k, v)
+    db.session.commit()
+    return ""
 ```
 
 
