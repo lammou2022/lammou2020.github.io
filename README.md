@@ -604,6 +604,7 @@ for link in links:
 
 <h3>Numpy Sympy MatPlotLib</h3>
 [install](https://numpy.org/install/)
+
 ```python
 from sympy import lambdify
 import numpy as np
