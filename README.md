@@ -73,9 +73,7 @@ Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 f8dbdd1..77f5e2a  main -> main
-
 ```
-
 
 ![](static/markdown.png)
 
@@ -84,6 +82,13 @@ f8dbdd1..77f5e2a  main -> main
 The Markdown Guide is a free and open-source reference guide that explains how to use Markdown, the simple and easy-to-use markup language you can use to format virtually any document.
 
 ## 一. Web 前端(html,css,js)
+
+HTML 的出現有一個好漂亮的名稱， 相對text,word文本來說，叫做"超文本" , link "超連結"。網絡普及化之后，現在沒人再講了。   
+HTML 說明了因應互联網及瀏覽器出現，需要一種基於標籤(註XML) 的文本排版方式。   
+例:
+&lt;h1&gt; 表示標題開始，結束。 h1,h2,h3,h4 &lt;/h1&gt;         
+&lt;p&gt; 表示段落開始，結束。  &lt;/p&gt;          
+都可以同MS Word對應!       
 
 參考標準[w3](https://www.w3.org/standards/webdesign/)分類，HTML&CSS , JavaScript Web APIs 
 
@@ -110,17 +115,17 @@ index.md
 ```text
     粵華南虎誕孖仔祝元旦
     
-                   #&@,(#                                                       
-               *(#/..(   &/%                                                    
-               @(#@.(   %  @   @ *&@%##(////////*.                              
-                 &#%%#@@ ,  .,*/   @    @   ((  @ ,& @@/                        
-                        *@  @   #, (  , (  & (  *  & *.& %&                     
-                         .&   / @  &  @ .  @ / &   * @ (*%,/ @/          *&     
-                          @@/ ( / *% ,@ %(%@&&@@(@  , ,/&    (#% / //%@, &      
-                         & (###@ .@.         # ..,(( ,,, @.                     
-                        %   %   & */          ,. &     .@#&,                    
-                      ,@%&*      &,@        ,& @,       %.,@                    
-                   #%#@@,      &*@%/     .&@@#      .##* @    
+     #&@,(#                                                       
+ *(#/..(   &/%                                                    
+ @(#@.(   %  @   @ *&@%##(////////*.                              
+   &#%%#@@ ,  .,*/   @    @   ((  @ ,& @@/                        
+          *@  @   #, (  , (  & (  *  & *.& %&                     
+           .&   / @  &  @ .  @ / &   * @ (*%,/ @/          *&     
+            @@/ ( / *% ,@ %(%@&&@@(@  , ,/&    (#% / //%@, &      
+           & (###@ .@.         # ..,(( ,,, @.                     
+          %   %   & */          ,. &     .@#&,                    
+        ,@%&*      &,@        ,& @,       %.,@                    
+     #%#@@,      &*@%/     .&@@#      .##* @    
 
     二○二二年是虎年，華南虎雙胞胎慶祝元旦。廣東省林業局今日發佈，二○二一年十二月三十一日二十三時○二分和二十六分，廣東粵北華南虎省級自然保護區管理處韶關華南虎繁育研究基地華南虎媽媽“夢夢”順利產下兩隻華南虎幼崽，這也是繼去年三月和九月迎來“圓圓”和“慶慶”兩隻雌性虎寶寶後，該繁育研究基地年內再次“迎新”。兩隻華南虎寶寶的出生也創下“一年三胎四仔”的高產紀錄。
 
@@ -142,11 +147,13 @@ html
         //
         內容
 ```
-學習html標籤排版      
+
+學習html標準標籤排版功能      
 A.標題字 h1..h4    
 B.段落 p, div      
 C.插入圖片 img     
-D.超連結 a    
+D.超連結 a     
+E.code pre   
 
 [first.html](first.html)    
 <pre style="color:white;">
@@ -193,10 +200,82 @@ D.超連結 a
 <pre style="color:white;">
 p.moreinfo { font-style: italic }
 </pre>
+有些段落特別顯示斜體。  
+moreinfo 類的段落p 內部所有內容使用 font-style: italic 斜體字.   
 
-<h3> Selector </h3>
-[diner](diner.html)     
+CSS定義顯示模式   
+tag    
+.class_name或tag.class_name        
+#id_name     
+xpath     
+
+ex:   
+這里寫css清楚目標tag class id 來改變顯示字樣或圖型等效果。
+對分析網頁結構，尋找目標內容自動分析數據，及自動填表等功能有好大幫助。        
+有個css選擇器練習。高手可以試下。          
+
+<h3>css Selector </h3>
+
+[diner](https://flukeout.github.io/)   
+[題目](diner.html)     
 [解題](diner_ans.html)      
+[ex0 簡化版](diner_ready.html)      
+
+[ex1 簡化版](diner_ex1.html)      
+自定義apple oragne pickle樣式     
+<pre style="color:white;">
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+orange,apple {
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  border-style: solid;
+  border-width: 2px 4px 15px 4px;
+  height: 60px;
+  width: 60px;
+  position: relative;
+  margin: 20px 10px;
+}
+
+apple {
+  background: #e41919;
+  border-color: #ab1212;
+}
+
+orange {
+  background: orange;
+  border-color: #bd6e07;
+}
+
+pickle {
+  background: #179837;
+  width: 25px;
+  border-radius: 30px;
+  display: inline-block;
+  position: relative;
+  border: solid 2px #025a18;
+  border-width: 2px 2px 9px 2px;
+  margin: 20px 10px;
+}
+orange,apple,pickle {
+  box-shadow: 0px 5px 0px rgba(0,0,0,.2);
+  display: inline-block;
+  margin: 0 10px;
+  height: 60px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;pickle&gt;&lt;/pickle&gt;
+&lt;orange&gt;&lt;/orange&gt;
+&lt;apple&gt;&lt;/apple&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+[cs50 2020](https://www.youtube.com/watch?v=YoXxevp1WRQ&list=PLhQjrBD2T382_R182iC2gNZI9HzWFMC_8)
+[cs50 html css javascript](https://www.youtube.com/watch?v=Pawk7o9Tsds)
 
 https://www.bookstack.cn/read/html-tutorial/spilt.1.docs-elements.md
 
@@ -523,8 +602,73 @@ for link in links:
     print(link.getText() )
 ```
 
-<h3>Numpy</h3>
+<h3>Numpy Sympy MatPlotLib</h3>
 [install](https://numpy.org/install/)
+```python
+from sympy import lambdify
+import numpy as np
+from matplotlib.figure import Figure
+a=np.random.choice(range(4,10), 2) #list
+b,c,d=np.random.choice([2,4,8],3)
+expr= k*x+b
+lam_x = lambdify(x, expr, modules=['numpy'])
+x_vals = np.linspace(-5, 5, 10)
+y_vals = lam_x(x_vals)
+fig = Figure()
+fig.set_figheight(3)
+fig.set_figwidth(3)            
+ax = fig.subplots()
+ax.plot(x_vals, y_vals)
+ax.axhline(0, color='black')
+ax.axvline(0, color='black')            
+fig.savefig(os.getcwd()+"\\static\\"+TE["PlotImg"])
+#Or Save it to a temporary buffer.
+#buf = BytesIO()
+#fig.savefig(buf, format="png")
+#data = base64.b64encode(buf.getbuffer()).decode("ascii")
+#return f"<img src='data:image/png;base64,{data}'/>"        
+
+def plotTriangle(t,BAngle,li,Path_):
+    B, C, A = t.vertices #頂点
+    AB, BC, CA = Segment(A, B), Segment(B, C), Segment(C, A) #辺の設定 右辺は ABC.sidesと同等
+    a, b, c = BC.length, CA.length, AB.length #辺の長さ
+    opposides = { A: BC, B: CA, C: AB } #頂点に対する対辺(opposite side) #print(AB,BC,CA ,*t.sides)    
+    # Figure and Axes
+    fig=Figure()
+    fig.set_figheight(3)
+    fig.set_figwidth(3)
+    ax=fig.subplots()    
+    #plt.close('all')
+    #fig = plt.figure()
+    #ax = fig.add_subplot(1, 1, 1)
+    ax.set_aspect('equal')      #ax.grid()
+    ax.set_axis_off() #軸の非表示
+    ax.add_patch(plt.Polygon(t.vertices, fill=False))  
+    ax.plot(*zip(*t.vertices), 'o') #'ro'
+    ax.text(*B, '$\mathrm{B}$', ha='right', va='top') 
+    ax.text(*C, '$\mathrm{C}$', ha='left', va='top')
+    ax.text(*A, '$\mathrm{A}$', ha='left', va='bottom')
+    squar_side_len=(a / 10)
+    c1=Point(C[0],C[1]+squar_side_len)
+    c2=Point(C[0]-squar_side_len,C[1]+squar_side_len)
+    c3=Point(C[0]-squar_side_len,C[1])
+    ax.add_patch(plt.Polygon([C,c1,c2,c3], fill=False))
+    ax.text(*BC.midpoint, '$\mathrm{a } $', ha='right', va='top')
+    ax.text(*CA.midpoint, '$\mathrm{b } $', ha='left', va='top')
+    ax.text(*AB.midpoint, '$\mathrm{c } $', ha='left', va='bottom')  
+    #Arc Plot
+    if BAngle != None:
+        d=np.arange(start=0,stop=BAngle,step=1)
+        rad=np.deg2rad(d)
+        r=(a/10)
+        xc = r*np.cos(rad)
+        yc = r*np.sin(rad)
+        ax.plot(xc,yc,color=[20/255,20/255,20/255],linestyle='-')   
+        ax.text(B[0]+r,B[1]+0.04,f'${BAngle}^o$')
+    #plt.show()
+    fig.savefig(os.getcwd()+"\\static\\"+Path_) 
+    return Path_       
+```
 
 <h3>Pandas</h3>
 [Getting_started](https://pandas.pydata.org/getting_started.html)
@@ -652,8 +796,172 @@ data=[1,2,3,4,5]
 out_ws.append(data)
 out_wb.save('out.xlsx')
 ```
+## 六. gird_v
+grid_v2 table2csv combobox 2list
 
-## 六. Summary_總結
+```pug 
+extends ./base.pug
+block content
+  script(src='/javascripts/cool/grid_v2.js')
+  script(src='/javascripts/cool/table2csv.js')
+  .btn-group      
+    a(href="#", class='btn btn-primary btn-sm')#exportcsv  下戴CSV  
+    a(href="#", class='btn btn-primary btn-sm')#editbtn  編輯  
+    a(href="#", class='btn btn-primary btn-sm')#readmodebtn 唯讀  
+    a(href="#", class='btn btn-primary btn-sm')#savebtn 儲存  
+div#tableContent  
+    table.table
+      tr 
+        td id
+        td#MA_H col_1
+        td#MB_H col_2
+        td#MC_H col_3
+      each r in data
+        tr
+          td= r.id
+          td.M(id=`MA_col-1_${r.id}`)= r.col_1
+          td.M(id=`MA_col-2_${r.id}`)= r.col_2
+          td.M(id=`MA_col-3_${r.id}`)= r.col_3
+  script(type="text/javascript").
+    var PostUrl='/api/JSON/updateSet' ;    
+    $(document).ready(function(){
+    	BindingFunctions("editbtn","savebtn",'readmodebtn');
+    	BindingHead_EditMode(['MA_H','MB_H','MC_H']);
+    	BindingFieldDefsIntegerFields({'MB':'INT','MF':'INT','MG':'INT'});
+    	GenOriginalData();
+       $("#exportcsv").on('click', function(event) {
+        var args = [$('#tableContent>table'), 'export0.csv'];
+        exportTableToCSV.apply(this, args);
+      });
+    });    
+```
+```js
+/*api.js*/
+const express = require('express');
+const router = express.Router();
+function getSQLiteModel () { return require(`./model-sqlite`);}
+function getModel () { return require(`./model-mysql-pool`); }
+router.get('/grid', require('connect-ensure-login').ensureLoggedIn(), (req, Response, next) => {
+    getSQLiteModel().list((err,data)=>{
+        Response.render('applyformMng/grid.pug', {
+            profile:req.user,
+            data:data
+       });
+    });
+});
+router.post('/api/JSON/updateSet/:rowid', images.multer.array('upload',16),    require('connect-ensure-login').ensureLoggedIn(), (req, Response, next) => {
+  let data=req.body
+  getSQLiteModel().UpdateDataSet(data,(err,result)=>{
+      if(err){return Response.end(err.message) }
+      Response.end(result)
+  });
+});
+/*model_sqlite.js*/
+var sqlite3 = require('sqlite3').verbose()
+var db = new sqlite3.Database('bookshelf.db')
+function list(cb) {
+  db.serialize(function () {
+      db.all('SELECT * FROM appform;', function (err, rows) {
+          if (err) { cb(err); return; }
+          cb(null, rows);
+    })
+  })
+}
+function UpdateDataSet(DataSet,cb) {
+  db.serialize(function () {
+    for(let prop in DataSet)
+    {
+        let fieldnamelist=[], valuelist=[];
+        for(let fieldname in DataSet[prop])
+        {
+          fieldnamelist.push(`${fieldname}=?`);
+          valuelist.push(DataSet[prop][fieldname]);
+        }
+        valuelist.push(prop);
+        db.run(`UPDATE appform SET ${fieldnamelist.join(",")}  WHERE id=?`,valuelist,function(err){
+          if(err){ cb(err);return; }
+          cb(null,`updated!${this.changes}`)
+        });
+    }
+  })
+}
+module.exports = {
+    list: list,
+    UpdateDataSet: UpdateDataSet,
+}    
+```
+```js
+/*mysql async await*/
+const mysql = require('mysql');
+const options = {
+    host: '127.0.0.1',
+    user: 'user',
+    password: 'pass',
+    database: 'db'
+};
+const pool = mysql.createPool(options);
+function list(cb) {
+    pool.getConnection(function (err, connection) {
+        if(err){cb(err);return;}
+        connection.query(
+            'SELECT * FROM appform; ',[],
+            (err, results) => {
+                if (err) { cb(err); return; }
+                cb(null, results);
+                connection.release();
+            }
+        );
+    });
+}
+async function UpdateDataSet(DataSet, cb) {
+    pool.getConnection(async function (err, connection) {
+        if (err) { cb(err); return; }
+        let cnt = 0;
+        for(let prop in DataSet)
+        {
+            cnt += await new Promise((resolve, reject) => {
+                connection.query(`update appform set ? where id=?;`, [DataSet[prop], actcid], (err, res) => {
+                    if (err) { console.log(err); reject(err); }
+                    resolve(100);
+                });
+            });
+        }
+        cb(null, Math.floor(cnt / 100));
+        connection.release();
+        //let alist = Object.keys(aObj);
+        //for (let i = 0; i < alist.length; i++) { let val = aObj[alist[i]]; }
+    });
+}
+```
+```python
+# flask_sqlalshemy
+# crud.py
+@crud.route('/api/JSON/updateSet/<nothing>', methods=['GET', 'POST'])
+@login_required_auth
+def itemJsonUpdateSet(nothing):
+    data=request.get_json()
+    for itemid in data:
+        if 'regSDate' in data[itemid]:
+            data[itemid]['regSDate']=datetime.strptime(data[itemid]['regSDate'], '%Y-%m-%d')
+        if 'itemno' in data:   
+            if data[itemid]["itemno"]=="" or data[itemid]["itemno"]=="None" or data[itemid]["itemno"]==None:
+                data[itemid]["itemno"]=None
+            else:
+                pass
+    book = get_model().updateItem_DataSet(data)
+    return "Update !"
+# Model.py
+def updateItem_DataSet(data):
+    for id in data:
+        acc = Item.query.get(id)
+        for k, v in data[id].items():
+            setattr(acc, k, v)
+    db.session.commit()
+    return ""
+```
+
+
+## 七. Summary_總結
 
 回顧，學習程式設計這門課的時候，理論算法很多。導師還是提供了實戰機會，數學基礎，職業技能，軟件技術趋向，英語技能，前沿性，當時沒懂。
 我想寫總結一下Web前端和Python后端的技能，還有SampleCode實作分享! 努力寫作中! 耐心等待....
