@@ -225,7 +225,7 @@ moreinfo 類的段落p 內部所有內容使用 font-style: italic 斜體字.
 自定義Html tag    
 [ex0](diner_ready.html)      
 
-[ex1](diner_ex1.html)      
+[ex1 簡化版](diner_ex1.html)      
 
 <pre style="color:white;">
 &lt;html&gt;
