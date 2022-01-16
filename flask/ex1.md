@@ -1,9 +1,10 @@
 # flask
 
+這是保全的孤本。請好好珍惜。最新版本只有firebase。   
+
 https://cloud.google.com/appengine/docs/standard/nodejs/tutorials
 
 https://cloud.google.com/python/docs/getting-started
-
 
 ```cmd
 turtor\
@@ -21,8 +22,6 @@ turtor\
          _init_.py
          crud.py
          model_cloudsql.py
-         mySession.py
-         mySession_redis.py
          storage.py
 ```
 
@@ -72,17 +71,9 @@ import logging
 from functools import wraps
 from flask import current_app, Flask, redirect, request, session, url_for
 import httplib2
-# [START include]
-# from oauth2client.contrib.flask_util import UserOAuth2
 from flask_session import Session
-# from .mySession import MySessionInterface
-# oauth2 = UserOAuth2()
-# [END include]
 
-records = [
-  { "id":1,"user": "admin" ,"pass":"123","displayName":"admin"}
-]
-
+records = [  { "id":1,"user": "admin" ,"pass":"123","displayName":"admin"} ]
 
 def create_app(config, debug=False, testing=False, config_overrides=None):
     
@@ -103,26 +94,13 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
     with app.app_context():
         model = get_model()
         model.init_app(app)
-    app.config['SESSION_COOKIE_NAME'] ="connect.sid"
+    #app.config['SESSION_TYPE'] = 'redis'  # session类型为redis
+    #app.config['SESSION_REDIS'] = redis.Redis(host='127.0.0.1',port=app.config['REDIS_PORT'])  
     app.config['SESSION_PERMANENT'] = False  # 如果设置为True，则关闭浏览器session就失效。
     app.config['SESSION_USE_SIGNER'] = False  # 是否对发送到浏览器上session的cookie值进行加密
     app.config['SESSION_KEY_PREFIX'] = 'sess:'  # 保存到session中的值的前缀
-    #app.session_interface = MySessionInterface()
     Session(app)
-    
-    #se=Session
-    #se.init_app(app)
-    
-    # [START init_app]
-    # Initalize the OAuth2 helper.
-    #oauth2.init_app(
-    #    app,
-    #    scopes=['email', 'profile'],
-    #    authorize_callback=_request_user_info)
-    #
-    # [END init_app]
 
-    # [START logout]
     # Add a logout handler.
     @app.route('/logout')
     def logout():
@@ -418,18 +396,49 @@ if __name__ == '__main__':
     #manager.run()
 
 ```
-bookshelf/mySession.py
-```python
 
-
-```
-bookshelf/mySession_redis.py
-```python
-
-
-```
 bookshelf/storage.py
+
 ```python
+from __future__ import absolute_import
+import datetime
+from flask import current_app
+import six
+from werkzeug.utils import secure_filename
+from werkzeug.exceptions import BadRequest
+import os
+from urllib.parse import quote
 
 
+def _check_extension(filename, allowed_extensions):
+    if ('.' not in filename or
+            filename.split('.').pop().lower() not in allowed_extensions):
+        raise BadRequest(
+            "{0} has an invalid name or extension".format(filename))
+
+
+def _safe_filename(filename):
+    """
+    ``filename.ext`` is transformed into ``filename-YYYY-MM-DD-HHMMSS.ext``
+    """
+    filename = secure_filename(filename)
+    date = datetime.datetime.utcnow().strftime("%Y-%m-%d-%H%M%S")
+    basename, extension = filename.rsplit('.', 1)
+    return "{0}-{1}.{2}".format(basename, date, extension)
+
+
+def upload_file(file, filename, content_type,UPLOAD_FOLDER):
+    """
+    Uploads a file to a given Cloud Storage bucket and returns the public url
+    to the new object.
+    """
+    _check_extension(filename, current_app.config['ALLOWED_EXTENSIONS'])
+    filename = _safe_filename(filename)
+    file.save(os.path.join(UPLOAD_FOLDER, filename))
+    url = f"/api/img/{quote(filename)}"
+
+    if isinstance(url, six.binary_type):
+        url = url.decode('utf-8')
+
+    return url
 ```
