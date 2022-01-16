@@ -203,11 +203,11 @@ p.moreinfo { font-style: italic }
 有些段落特別顯示斜體。  
 moreinfo 類的段落p 內部所有內容使用 font-style: italic 斜體字.   
 
-CSS定義顯示模式   
-tag    
-.class_name或tag.class_name        
-#id_name     
-xpath     
+CSS 選擇方式, 顯示模式   
+tag {}   
+.class_name 或 tag.class_name {}        
+#id_name {}    
+xpath {}    
 
 ex:   
 這里寫css清楚目標tag class id 來改變顯示字樣或圖型等效果。
@@ -222,7 +222,10 @@ ex:
 [ex0 簡化版](diner_ready.html)      
 
 [ex1 簡化版](diner_ex1.html)      
-自定義apple oragne pickle樣式     
+
+已定義h1、 p、 div等等。   
+自定義apple oragne pickle CSS樣式        
+
 <pre style="color:white;">
 &lt;html&gt;
 &lt;head&gt;
@@ -274,8 +277,11 @@ orange,apple,pickle {
 &lt;/html&gt;
 </pre>
 
-[cs50 2020](https://www.youtube.com/watch?v=YoXxevp1WRQ&list=PLhQjrBD2T382_R182iC2gNZI9HzWFMC_8)
-[cs50 html css javascript](https://www.youtube.com/watch?v=Pawk7o9Tsds)
+參考youtube電腦課程CS50      
+[cs50 2020](https://www.youtube.com/watch?v=YoXxevp1WRQ&list=PLhQjrBD2T382_R182iC2gNZI9HzWFMC_8)      
+[cs50 html css javascript](https://www.youtube.com/watch?v=Pawk7o9Tsds)     
+
+參考書
 
 https://www.bookstack.cn/read/html-tutorial/spilt.1.docs-elements.md
 
@@ -721,8 +727,11 @@ sum_s=df1.sum(axis=0)
 display(sum_s)
 ```
 
+pearson R 相關性。     
+
 <h3>python-docx</h3>
 [Release v0.8.11 (Installation)](https://python-docx.readthedocs.io/en/latest/)
+
 ```python
 from docx import Document
 from docx.shared import Inches
@@ -772,11 +781,14 @@ document.save('demo.docx')
 <h3>openopxl</h3>
 
 [Installation](https://openpyxl.readthedocs.io/en/stable/#)
+
 ```cmd
 $ pip install openpyxl
 $ pip install pillow
 ```
+
 read_xl.py
+
 ```python
 from openpyxl import load_workbook
 wb = load_workbook(filename = 'empty_book.xlsx')
@@ -789,8 +801,11 @@ for sn_ in wb.sheetnames:
         col_s.append(c_name)
     print(col_s)
 ```
+
 write_xl.py
+
 ```python
+
 from openpyxl import Workbook
 out_wb = Workbook()
 out_ws = out_wb.active
@@ -798,8 +813,17 @@ data=[1,2,3,4,5]
 out_ws.append(data)
 out_wb.save('out.xlsx')
 ```
-## 六. gird_v
-grid_v2 table2csv combobox 2list
+## 六. grid_v2
+
+combobox 
+
+
+
+twolist
+
+
+
+grid_v2 table2csv 
 
 ```pug 
 extends ./base.pug
@@ -837,6 +861,7 @@ div#tableContent
       });
     });    
 ```
+
 ```js
 /*api.js*/
 const express = require('express');
@@ -891,7 +916,8 @@ module.exports = {
     list: list,
     UpdateDataSet: UpdateDataSet,
 }    
-```
+``` 
+
 ```js
 /*mysql async await*/
 const mysql = require('mysql');
