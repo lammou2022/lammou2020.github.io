@@ -557,9 +557,11 @@ out_txt("c")
 ```
 
 https://pypi.org/project/selenium/
+
 ```cmd
 pip install selenium
 ```
+
 ```python
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -728,6 +730,14 @@ display(sum_s)
 ```
 
 pearson R 相關性。     
+
+```python
+from scipy import stats
+a = np.array([0, 0, 0, 1, 1, 1, 1])
+b = np.arange(7)
+stats.pearsonr(a, b)
+(0.8660254037844386, 0.011724811003954649)
+```
 
 <h3>python-docx</h3>
 [Release v0.8.11 (Installation)](https://python-docx.readthedocs.io/en/latest/)
