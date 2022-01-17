@@ -83,12 +83,49 @@ The Markdown Guide is a free and open-source reference guide that explains how t
 
 ## 一. Web 前端(html,css,js)
 
+最早標記式語言SGML。     
+
+可延伸標記式語言（英語：Extensible Markup Language，簡稱：XML）是一種標記式語言。XML是從標準通用標記式語言（SGML）中簡化修改出來的。它主要用到的有可延伸標記式語言、可延伸樣式語言（XSL）、XBRL和XPath等。     
+
+標記（Markup）與內容（content）    
+
+XML文件的字元分為標記（Markup）與內容（content）兩類。標記通常以&lt;開頭，以&gt;結尾；或者以字元& 開頭，以;結尾。不是標記的字元就是內容。    
+
+標籤（Tag）   
+
+<pre style="color:white;">
+start-tag，如&lt;section&gt;;
+end-tag，如  &lt;/section&gt;;
+empty-element tag，如&lt;line-break /&gt;.
+</pre>
+
+元素/內容（Element）    
+
+元素是文件邏輯組成，或者在start-tag與匹配的end-tag之間。    
+
+屬性（Attribute）    
+
+屬性是一種標記結構，在start-tag或empty-element tag內部的「名字-值對」。例如：&lt;img src="madonna.jpg" alt="Madonna" /&gt;。每個元素中，一個屬性最多出現一次，一個屬性只能有一個值。
+
+<pre style="color:white;">
+&lt;?xml version="1.0"?>
+  &lt;小纸条&gt;
+    &lt;收件人>大元&lt;/收件人&gt;
+    &lt;發件人>小張&lt;/發件人&gt;
+    &lt;主題>問候&lt;/主題&gt;
+    &lt;具體內容>早啊，飯吃了沒？ &lt;/具體內容&gt;
+  &lt;/小纸条&gt;
+</pre>
+
+HTML 出現比是XML早，互聯網上共享文字。從標準通用標記式語言（SGML）演化以來。      
 HTML 的出現有一個好漂亮的名稱， 相對text,word文本來說，叫做"超文本" , link "超連結"。網絡普及化之后，現在沒人再講了。   
-HTML 說明了因應互联網及瀏覽器出現，需要一種基於標籤(註XML) 的文本排版方式。   
-例:
-&lt;h1&gt; 表示標題開始，結束。 h1,h2,h3,h4 &lt;/h1&gt;         
-&lt;p&gt; 表示段落開始，結束。  &lt;/p&gt;          
-都可以同MS Word對應!       
+
+例:都想像MS Word排版    
+標題:&lt;h1&gt; 表示標題開始，結束。 H1,H2,H3,H4,H5,H6 &lt;/h1&gt;         
+段落:&lt;p&gt; 表示段落開始，結束。  &lt;/p&gt;          
+
+
+[Hypertext Markup Language (HTML-01) June 1993](https://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt)
 
 參考標準[w3](https://www.w3.org/standards/webdesign/)分類，HTML&CSS , JavaScript Web APIs 
 
@@ -103,6 +140,7 @@ JavaScript is a scripting language that enables you to create dynamically updati
 我第一個HTML
 
 文件結構
+
 ```text
 static\a.js
 static\a.css
@@ -136,20 +174,25 @@ index.md
     For more information . LinkTo http://www.macaodaily.com
 ```
 HTML基本結構      
-```html
-html
-    head
-        script.
-          //
-        style.
-          //
-    body
-        //
+<pre style="color:white;">
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;script&gt;
+          /*   */
+        &lt;/script&gt;
+        &lt;style&gt;
+          /*  */
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        /*   */
         內容
-```
+    &lt;/body&gt;
+&lt;/html&gt;    
+</pre>
 
 學習html標準標籤排版功能      
-A.標題字 h1..h4    
+A.標題字 h1..h6    
 B.段落 p, div      
 C.插入圖片 img     
 D.超連結 a     
@@ -173,13 +216,15 @@ E.code pre
   &lt;body&gt;
     &lt;h1&gt;粵華南虎誕孖仔祝元旦&lt;/h1&gt;
     &lt;img src=static/a.png&gt;  
-    &lt;div&gt;
+    &lt;p&gt;
 二○二二年是虎年，華南虎雙胞胎慶祝元旦。廣東省林業局今日發佈，二○二一年十二月三十一日二十三時○二分和二十六分，廣東粵北華南虎省級自然保護區管理處韶關華南虎繁育研究基地華南虎媽媽“夢夢”順利產下兩隻華南虎幼崽，這也是繼去年三月和九月迎來“圓圓”和“慶慶”兩隻雌性虎寶寶後，該繁育研究基地年內再次“迎新”。兩隻華南虎寶寶的出生也創下“一年三胎四仔”的高產紀錄。
+    &lt;/p&gt;
 
-    保護華南虎種群
+    &lt;h3&gt;保護華南虎種群&lt;h3&gt;
 
+    &lt;p&gt;
     虎共有九個亞種，目前有三個亞種已滅絕，目前最為瀕臨滅絕的虎亞種是華南虎，是世界極度瀕危的十大物種之一，屬於國家一級保護動物。
-    &lt;/div&gt;
+    &lt;/p&gt;
 
     &lt;p class="moreinfo"&gt;For more information 
     &lt;a href="http://www.example.com/report"&gt;detail&lt;/a&gt;.&lt;/p&gt;
@@ -1008,6 +1053,8 @@ def updateItem_DataSet(data):
 我的[日記diary](diary.html)
 
 [flask bookshelf](flask/ex1.html)
+
+[expressjs bookshelf](nodejs/ex1.html)
 
 我的動態域名,[464r747p64.qicp.vip](http://464r747p64.qicp.vip) 用不了,先留用着。   
 
