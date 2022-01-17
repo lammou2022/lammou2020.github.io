@@ -1002,9 +1002,12 @@ def updateItem_DataSet(data):
 ## 七. Summary_總結
 
 回顧，學習程式設計這門課的時候，理論算法很多。導師還是提供了實戰機會，數學基礎，職業技能，軟件技術趋向，英語技能，前沿性，當時沒懂。
+
 我想寫總結一下Web前端和Python后端的技能，還有SampleCode實作分享! 努力寫作中! 耐心等待....
 
 我的[日記diary](diary.html)
+
+[flask bookshelf](flask/ex1.html)
 
 我的動態域名,[464r747p64.qicp.vip](http://464r747p64.qicp.vip) 用不了,先留用着。   
 
