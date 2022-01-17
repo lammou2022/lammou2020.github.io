@@ -1,0 +1,6 @@
+.vscode
+config.py
+__pycache__/
+Pipfile
+*.pyc
+*.db

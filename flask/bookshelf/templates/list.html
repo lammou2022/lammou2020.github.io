@@ -18,30 +18,30 @@
 
 {% block content %}
 
-<h3>assets</h3>
-<a href="/assets/add" class="btn btn-success btn-sm">
+<h3>books</h3>
+<a href="/books/add" class="btn btn-success btn-sm">
   <i class="glyphicon glyphicon-plus"></i>
-  Add asset
+  Add book
 </a>
 
-{% for asset in assets %}
+{% for book in books %}
 <div class="media">
-  <a href="/assets/{{asset.id}}">
+  <a href="/books/{{book.id}}">
     <div class="media-left">
-      {% if asset.imageUrl %}
-        <img src="{{asset.imageUrl}}">
+      {% if book.imageUrl %}
+        <img src="{{book.imageUrl}}">
       {% else %}
         <img src="http://placekitten.com/g/128/192">
       {% endif %}
     </div>
     <div class="media-body">
-      <h4>{{asset.title}}</h4>
-      <p>{{asset.author}}</p>
+      <h4>{{book.title}}</h4>
+      <p>{{book.author}}</p>
     </div>
   </a>
 </div>
 {% else %}
-<p>No assets found</p>
+<p>No books found</p>
 {% endfor %}
 
 {% if next_page_token %}
