@@ -4,8 +4,13 @@
 config.js
 app.js
 package.json
-bookshelf\
-
+books\
+    api.js
+    crud.js
+    model-msyql.js
+    model-sqlite.js
+    model-redis.js
+    images.js
     views\
 
       lib\
@@ -143,7 +148,7 @@ const server = app.listen(config.get('PORT'), () => {
 });
 ```
 
-## bookshelf/api.js
+## books/api.js
 
 ```js
 'use strict';
@@ -251,7 +256,7 @@ router.use((err, req, res, next) => {
 module.exports = router;
 ```
 
-## bookshelf/crud.js
+## books/crud.js
 
 ```js
 'use strict';
@@ -443,7 +448,7 @@ router.use((err, req, res, next) => {
 module.exports = router;
 ```
 
-## bookshelf/model-mysql.js
+## books/model-mysql.js
 
 ```js
 'use strict';
@@ -597,21 +602,21 @@ CREATE TABLE IF NOT EXISTS `bookshelf`.`books` (
   */
 ```
 
-## bookshelf/model-sqlite.js
+## books/model-sqlite.js
 
 ```js
 
 
 ```
 
-## bookshelf/model-redis.js
+## books/model-redis.js
 
 ```js
 
 
 ```
 
-## bookshelf/images.js
+## books/images.js
 
 ```js
 'use strict';

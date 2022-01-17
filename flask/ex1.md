@@ -11,7 +11,7 @@ turtor\
    config.py
    main.py
    requirements.txt
-   bookshelf\
+   books\
          static
          templates
                 \
@@ -25,7 +25,8 @@ turtor\
          storage.py
 ```
 
-requirements.txt
+## requirements.txt
+
 ```text
 Flask==1.1.1
 oauth2client==4.1.3
@@ -35,7 +36,7 @@ six==1.11.0
 flask-session==0.3.1
 ```
 
-config.py
+## config.py
 
 ```python
 import os
@@ -43,7 +44,7 @@ MAX_CONTENT_LENGTH = 8 * 1024 * 1024
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 UPLOAD_FOLDER=os.getcwd()+"\\TEMP"
 REDIS_PORT=6379
-SQLITE_PATH=os.getcwd()+"\\bookshelf.db"
+SQLITE_PATH=os.getcwd()+"\\books.db"
 SQLALCHEMY_SQLITE_URI = ( 'sqlite:///{path}').format(path=SQLITE_PATH)
 SECRET_KEY = 'cat'
 SESSION_COOKIE_NAME='connect.sid'
@@ -52,19 +53,20 @@ if DATA_BACKEND=='sqlite':
     SQLALCHEMY_DATABASE_URI = SQLALCHEMY_SQLITE_URI
 ```
 
-main.py
+## main.py
 
 ```python
-import bookshelf
+import books
 import config
 
-app = bookshelf.create_app(config)
+app = books.create_app(config)
 
 if __name__ == '__main__':
     app.run( host="0.0.0.0",port=80, debug=True)
 ```
 
-bookshelf/_init_.py
+## books/_init_.py
+
 ```python
 import json
 import logging
@@ -174,9 +176,10 @@ def login_required_auth(f):
 ```
 
 
-bookshelf/crud.py
+## books/crud.py
+
 ```python
-from bookshelf import login_required_auth, get_model,  storage
+from books import login_required_auth, get_model,  storage
 from flask import Blueprint, current_app, redirect, render_template, request, \
     session, url_for
 
@@ -282,7 +285,8 @@ def delete(id):
     return redirect(url_for('.list'))
 ```
 
-bookshelf/model_cloudsql.py
+## books/model_cloudsql.py
+
 ```python
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -397,7 +401,7 @@ if __name__ == '__main__':
 
 ```
 
-bookshelf/storage.py
+## books/storage.py
 
 ```python
 from __future__ import absolute_import
