@@ -8,9 +8,7 @@ from flask_session import Session
 # [END include]
 
 records = [
-  { "id":0,"user":"mng","Pass":"123","Name":"Ad","Classno":"","Seat":"","Role":"7","displayName":"admin"},
-  { "id":10002,"user":'stu', "Pass":'123',"Name":"Aa","Classno":"SC1A","Seat":"99","Role":"8", "displayName": "A" } ,  
-  { "id":10003,"user":'stu1', "Pass":'123',"Name":"Bb","Classno":"SC1A","Seat":"98","Role":"8", "displayName": "B" }   
+  { "id":0,"user":"root","Pass":"123","Name":"admin","Classno":"","Seat":"","Role":"7","displayName":"admin"}
 ]
 
 def create_app(config, debug=False, testing=False, config_overrides=None):
@@ -23,11 +21,11 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
         model = get_model()
         model.init_app(app)
     app.config['SESSION_COOKIE_NAME'] ="connect.sid"
-    app.config['SESSION_TYPE'] = 'redis'  # session类型为redis
+    #app.config['SESSION_TYPE'] = 'redis'  # session类型为redis
     app.config['SESSION_PERMANENT'] = False  # 如果设置为True，则关闭浏览器session就失效。
     app.config['SESSION_USE_SIGNER'] = False  # 是否对发送到浏览器上session的cookie值进行加密
     app.config['SESSION_KEY_PREFIX'] = 'sess:'  # 保存到session中的值的前缀
-    app.config['SESSION_REDIS'] = redis.Redis(host='127.0.0.1',port=app.config["REDIS_PORT"])  
+    #app.config['SESSION_REDIS'] = redis.Redis(host='127.0.0.1',port=app.config["REDIS_PORT"])  
     Session(app)
 
     # Add a logout handler.

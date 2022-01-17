@@ -1047,6 +1047,8 @@ def updateItem_DataSet(data):
 
 [flask bookshelf](flask/ex1.html)
 
+[expressjs bookshelf](nodejs/ex1.html)
+
 我的動態域名,[464r747p64.qicp.vip](http://464r747p64.qicp.vip) 用不了,先留用着。   
 
 contact to: mbc11thsp@gmail.com

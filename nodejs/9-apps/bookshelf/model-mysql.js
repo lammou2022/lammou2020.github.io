@@ -1,16 +1,3 @@
-// Copyright 2017, Google, Inc.
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//    http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 'use strict';
 
 const mysql = require('mysql');
@@ -29,7 +16,7 @@ function list( userId , cb) {
         if(err){cb(err);return;}
         // Use the connection
         connection.query(
-            'SELECT * FROM `assets` order by id DESC ',[],
+            'SELECT * FROM `bookshelf` order by id DESC ',[],
             (err, results) => {
                 if (err) {
                     cb(err);
@@ -46,7 +33,7 @@ function listMore( limit,  token, cb) {
     pool.getConnection(function (err, connection) {
         if(err){cb(err);return;}
         connection.query(
-            'SELECT *  FROM `assets` order by id DESC LIMIT ? OFFSET ?', //, DAYOFWEEK(logDate)-1 dw
+            'SELECT *  FROM `bookshelf` order by id DESC LIMIT ? OFFSET ?', //, DAYOFWEEK(logDate)-1 dw
             [ limit, token],
             (err, results) => {
                 if (err) {
@@ -64,7 +51,7 @@ function listBy(id, limit, token, cb) {
     pool.getConnection(function (err, connection) {
         if(err){cb(err);return;}
         connection.query(
-            'SELECT * FROM `assets` where createdById = ? order by id desc  LIMIT ? OFFSET ?',
+            'SELECT * FROM `bookshelf` where createdById = ? order by id desc  LIMIT ? OFFSET ?',
             [ id,limit, token],
             (err, results) => {
                 if (err) {
@@ -85,7 +72,7 @@ function create( data, cb) {
     
     pool.getConnection(function (err, connection) {
         if(err){cb(err);return;}
-        connection.query('INSERT INTO `assets` SET ? ', [data], (err, res) => {
+        connection.query('INSERT INTO `bookshelf` SET ? ', [data], (err, res) => {
             if (err) {
                 cb(err);
                 return;
@@ -102,7 +89,7 @@ function read( id, cb) {
     pool.getConnection(function (err, connection) {
         if(err){cb(err);return;}
         connection.query(
-            'SELECT * FROM `assets` WHERE `id` = ? ', id, (err, results) => {
+            'SELECT * FROM `bookshelf` WHERE `id` = ? ', id, (err, results) => {
                 if (!err && !results.length) {
                     err = {
                         code: 404,
@@ -122,7 +109,7 @@ function update( id, data, cb) {
     pool.getConnection(function (err, connection) {
         if(err){cb(err);return;}
         connection.query(
-            'UPDATE `assets` SET ? WHERE `id` = ?  ', [data, id], (err) => {   //and `createdById` = ?
+            'UPDATE `bookshelf` SET ? WHERE `id` = ?  ', [data, id], (err) => {   //and `createdById` = ?
                 if (err) {
                     cb(err);
                     return;
@@ -136,7 +123,7 @@ function update( id, data, cb) {
 function _delete(userid, id ,cb) {
     pool.getConnection(function (err, connection) {
         if(err){cb(err);return;}
-        connection.query('DELETE FROM `assets` WHERE createdById=?  and `id` = ? ',[ userid,id ],  cb);
+        connection.query('DELETE FROM `bookshelf` WHERE createdById=?  and `id` = ? ',[ userid,id ],  cb);
         connection.release();
     });
 }

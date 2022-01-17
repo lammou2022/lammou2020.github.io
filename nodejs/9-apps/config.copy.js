@@ -35,9 +35,9 @@ nconf
     PORT: 8080,
     // Set this a secret string of your choosing
     SECRET: 'cat',
-    MYSQL_250_host: '127.0.0.1',
-    MYSQL_250_user: 'root',
-    MYSQL_250_password: 'password',
+    MYSQL_host: '127.0.0.1',
+    MYSQL_user: 'root',
+    MYSQL_password: 'password',
   });
 
 // Check for required settings

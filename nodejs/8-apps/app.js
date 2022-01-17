@@ -11,8 +11,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 const config = require('./config');
 //const config = require('./config');
-//const {Datastore} = require('@google-cloud/datastore');
-//const DatastoreStore = require('@google-cloud/connect-datastore')(session);
 
 const app = express();
 

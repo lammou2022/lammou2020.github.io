@@ -152,52 +152,60 @@ CREATE TABLE IF NOT EXISTS `bookshelf`.`books` (
   */
 
 
+
+
   'use strict';
-var sqlite3 = require('sqlite3').verbose()
-var db = new sqlite3.Database('d:/sp/data.sqlite')
+var reids=require("redis");
+var client=reids.createClient();
+const CloudTMS="CloudTMS"
+const CloudTMSStartDateTime="CloudTMSDateTime"
 
-
-function list(cb) {
-    db.serialize(function () {
-        /*
-        db.run('CREATE TABLE lorem (info TEXT)')
-        var stmt = db.prepare('INSERT INTO lorem VALUES (?)')
-        for (var i = 0; i < 10; i++) {
-          stmt.run('Ipsum ' + i)
-        }
-        stmt.finalize()
-        */
-        db.all('SELECT * FROM reltbl;', function (err, rows) {
-            if (err) {
-                cb(err);
-                return;
-            }
-            cb(null, rows);
-           // db.close()
-        })
-      })
+function SaveDateTime(data,cb){
+    client.hset(CloudTMS,CloudTMSStartDateTime,data,function(err,result){
+        if(err) cb(new Error('ADD ERROR'));
+        return cb(null,result);//result 1;
+    });
 }
-function listbydate(sd,ed,cb) {
-  db.serialize(function () {
-      /*
-      db.run('CREATE TABLE lorem (info TEXT)')
-      var stmt = db.prepare('INSERT INTO lorem VALUES (?)')
-      for (var i = 0; i < 10; i++) {
-        stmt.run('Ipsum ' + i)
-      }
-      stmt.finalize()
-      */
-      db.all('SELECT * FROM reltbl where md >= ? and md <= ? ;',[sd,ed], function (err, rows) {
-          if (err) {
-              cb(err);
-              return;
-          }
-          cb(null, rows);
-         // db.close()
-      })
-    })
-    }
+
+function ReadDateTime( cb) {
+    client.hget(CloudTMS,CloudTMSStartDateTime,function(err,result){
+        if(err){  //cb(new Error('TMS ' + id + ' does not exist'));
+            return cb(null,-1);    
+        } 
+        //let user=JSON.parse(result);
+        return cb(null,result);
+    });
+}
+
 module.exports = {
-    list: list,
-    listbydate: listbydate,
-}    
+    SaveDateTime:SaveDateTime,  
+    ReadDateTime:ReadDateTime,
+};      
+
+/*
+function list( userId , cb) {
+    console.log("LIST");
+    client.hgetall("TMS",function(err,result){
+        if(err) cb(new Error('TMS List ERROR'));
+        console.log(result);
+        return cb(null,result);
+    });
+}
+function AddTMSQF(fn,md,jsondata,username,cb){
+    let data={id:0,fn:fn,md:md,jsondata:jsondata,username:username};
+    console.log(data);
+    client.hset("TMS",fn,jsondata,function(err,result){
+        if(err) cb(new Error('TMS ADD ERROR'));
+        console.log(result);//return 1;
+        return cb(null,result);
+    });
+}
+
+function TMSQFlistbydate(sd,ed,cb) {
+    client.hgetall("TMS",function(err,result){
+        if(err) cb(new Error('TMS List ERROR'));
+        console.log(result);
+        return cb(null,result);
+    });
+ }
+*/
