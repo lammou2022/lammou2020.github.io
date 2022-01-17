@@ -83,6 +83,8 @@ The Markdown Guide is a free and open-source reference guide that explains how t
 
 ## 一. Web 前端(html,css,js)
 
+最早標記式語言SGML。     
+
 可延伸標記式語言（英語：Extensible Markup Language，簡稱：XML）是一種標記式語言。XML是從標準通用標記式語言（SGML）中簡化修改出來的。它主要用到的有可延伸標記式語言、可延伸樣式語言（XSL）、XBRL和XPath等。     
 
 標記（Markup）與內容（content）    
@@ -115,13 +117,15 @@ empty-element tag，如&lt;line-break /&gt;.
   &lt;/小纸条&gt;
 </pre>
 
-HTML 是XML一個子集，且有固定語義。h1題標字、p段落等對應winword格式。    
+HTML 出現比是XML早，互聯網上共享文字。從標準通用標記式語言（SGML）演化以來。      
 HTML 的出現有一個好漂亮的名稱， 相對text,word文本來說，叫做"超文本" , link "超連結"。網絡普及化之后，現在沒人再講了。   
-HTML 說明了因應互联網及瀏覽器出現，需要一種基於標籤(註XML) 的文本排版方式。   
-例:
-&lt;h1&gt; 表示標題開始，結束。 h1,h2,h3,h4 &lt;/h1&gt;         
-&lt;p&gt; 表示段落開始，結束。  &lt;/p&gt;          
-都可以同MS Word對應!       
+
+例:都想像MS Word排版    
+標題:&lt;h1&gt; 表示標題開始，結束。 H1,H2,H3,H4,H5,H6 &lt;/h1&gt;         
+段落:&lt;p&gt; 表示段落開始，結束。  &lt;/p&gt;          
+
+
+[Hypertext Markup Language (HTML-01) June 1993](https://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt)
 
 參考標準[w3](https://www.w3.org/standards/webdesign/)分類，HTML&CSS , JavaScript Web APIs 
 
