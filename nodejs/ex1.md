@@ -37,7 +37,7 @@ nconf
     // Typically you will create a bucket with the same name as your project ID.
     PORT: 8089,
     // Set this a secret string of your choosing
-    SECRET: 'keyboardcat',
+    SECRET: 'cat',
     REDISHOST:'127.0.0.1',
     MYSQL_HOST:'127.0.0.1',
     MYSQL_DB:'',
@@ -139,4 +139,312 @@ const server = app.listen(config.get('PORT'), () => {
     const port = server.address().port;
     console.log(`App listening on port ${port}`);
 });
+```
+
+bookshelf/api.js
+
+```js
+'use strict';
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const model = require('./model-mysql');
+
+const router = express.Router();
+
+// Automatically parse request body as JSON
+router.use(bodyParser.json());
+
+/**
+ * GET /api/books
+ *
+ * Retrieve a page of books (up to ten at a time).
+ */
+router.get('/', (req, res, next) => {
+  model.listMore(10, req.query.pageToken, (err, entities, cursor) => {
+    if (err) {
+      next(err);
+      return;
+    }
+    res.json({
+      items: entities,
+      nextPageToken: cursor,
+    });
+  });
+});
+
+/**
+ * POST /api/books
+ *
+ * Create a new book.
+ */
+router.post('/', (req, res, next) => {
+  model.create(req.body, (err, entity) => {
+    if (err) {
+      next(err);
+      return;
+    }
+    res.json(entity);
+  });
+});
+
+/**
+ * GET /api/books/:id
+ *
+ * Retrieve a book.
+ */
+router.get('/:book', (req, res, next) => {
+  model.read(req.params.book, (err, entity) => {
+    if (err) {
+      next(err);
+      return;
+    }
+    res.json(entity);
+  });
+});
+
+/**
+ * PUT /api/books/:id
+ *
+ * Update a book.
+ */
+router.put('/:book', (req, res, next) => {
+  model.update(req.params.book, req.body, (err, entity) => {
+    if (err) {
+      next(err);
+      return;
+    }
+    res.json(entity);
+  });
+});
+
+/**
+ * DELETE /api/books/:id
+ *
+ * Delete a book.
+ */
+router.delete('/:book', (req, res, next) => {
+  model.delete(req.params.book, err => {
+    if (err) {
+      next(err);
+      return;
+    }
+    res.status(200).send('OK');
+  });
+});
+
+/**
+ * Errors on "/api/books/*" routes.
+ */
+router.use((err, req, res, next) => {
+  // Format error and forward to generic error handler for logging and
+  // responding to the request
+  err.response = {
+    message: err.message,
+    internalCode: err.code,
+  };
+  next(err);
+});
+
+module.exports = router;
+```
+
+bookshelf/crud.js
+
+```js
+
+
+```
+
+bookshelf/model-mysql.js
+
+```js
+'use strict';
+
+const mysql = require('mysql');
+const config = require('../config');
+const options = {
+    host: config.get('CLOUDSQL_HOST'),
+    user: config.get('CLOUDSQL_USER'),
+    password: config.get('CLOUDSQL_PASSWORD'),
+    database: config.get('CLOUDSQL_DATABASE'),
+};
+
+const pool = mysql.createPool(options);
+
+function list( userId , cb) {
+    pool.getConnection(function (err, connection) {
+        if(err){cb(err);return;}
+        // Use the connection
+        connection.query(
+            'SELECT * FROM `bookshelf` order by id DESC ',[],
+            (err, results) => {
+                if (err) {
+                    cb(err);
+                    return;
+                }
+                cb(null, results);
+                connection.release();
+            }
+        );
+    });
+}
+
+function listMore( limit,  token, cb) {
+    token = token ? parseInt(token, 10) : 0;
+    pool.getConnection(function (err, connection) {
+        if(err){cb(err);return;}
+        connection.query(
+            'SELECT *  FROM `bookshelf` order by id DESC LIMIT ? OFFSET ?', //, DAYOFWEEK(logDate)-1 dw
+            [ limit, token],
+            (err, results) => {
+                if (err) {
+                    cb(err);
+                    return;
+                }
+                const hasMore = results.length === limit ? token + results.length : false;
+                cb(null, results, hasMore);
+                connection.release();
+            });
+    });
+}
+
+function listBy(id, limit, token, cb) {
+    token = token ? parseInt(token, 10) : 0;
+    pool.getConnection(function (err, connection) {
+        if(err){cb(err);return;}
+        connection.query(
+            'SELECT * FROM `bookshelf` where createdById = ? order by id desc  LIMIT ? OFFSET ?',
+            [ id,limit, token],
+            (err, results) => {
+                if (err) {
+                    cb(err);
+                    return;
+                }
+                const hasMore = results.length === limit ? token + results.length : false;
+                cb(null, results, hasMore);
+                connection.release();
+
+            });
+    });
+}
+
+function create( data, cb) {
+    pool.getConnection(function (err, connection) {
+        if(err){cb(err);return;}
+        connection.query('INSERT INTO `bookshelf` SET ? ', [data], (err, res) => {
+            if (err) {
+                cb(err);
+                return;
+            }
+            read( res.insertId, cb);
+            connection.release();
+        });
+    });
+}
+
+function read( id, cb) {
+    pool.getConnection(function (err, connection) {
+        if(err){cb(err);return;}
+        connection.query(
+            'SELECT * FROM `bookshelf` WHERE `id` = ? ', id, (err, results) => {
+                if (!err && !results.length) {
+                    err = {
+                        code: 404,
+                        message: 'Not found'
+                    };
+                }
+                if (err) {
+                    cb(err);
+                    return;
+                }
+                cb(null, results[0]);
+                connection.release();
+            });
+    });
+}
+
+function update( id, data, cb) {
+    pool.getConnection(function (err, connection) {
+        if(err){cb(err);return;}
+        connection.query(
+            'UPDATE `bookshelf` SET ? WHERE `id` = ?  ', [data, id], (err) => {  
+                if (err) {
+                    cb(err);
+                    return;
+                }
+                read( id, cb);
+                connection.release();
+            });
+    });
+}
+
+function _delete(userid, id ,cb) {
+    pool.getConnection(function (err, connection) {
+        if(err){cb(err);return;}
+        connection.query('DELETE FROM `bookshelf` WHERE createdById=?  and `id` = ? ',[ userid,id ],  cb);
+        connection.release();
+    });
+}
+
+module.exports = {
+    list: list,
+	  listBy: listBy,
+    listMore: listMore,
+    create: create,
+    read: read,    
+    update: update,
+    delete: _delete
+};
+/*
+CREATE TABLE IF NOT EXISTS `bookshelf`.`books` (
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `title` VARCHAR(255) NULL,
+    `author` VARCHAR(255) NULL,
+    `publishedDate` VARCHAR(255) NULL,
+    `imageUrl` VARCHAR(255) NULL,
+    `description` TEXT NULL,
+    `createdBy` VARCHAR(255) NULL,
+    `createdById` VARCHAR(255) NULL,
+  PRIMARY KEY (`id`));
+  */
+```
+
+bookshelf/model-sqlite.js
+
+```js
+
+
+```
+
+bookshelf/model-redis.js
+
+```js
+
+
+```
+
+bookshelf/images.js
+
+```js
+'use strict';
+const mrs_base_dir = process.cwd()+"/temp/";
+function sendUploadToGCS(req, res, next) {  return next();}
+const Multer = require('multer');
+var storage = Multer.diskStorage({
+    destination: mrs_base_dir,
+    filename: function (req, file, cb) {
+        var fileFormat = (file.originalname).split(".");
+        cb(null, file.fieldname + "." + fileFormat[fileFormat.length - 1]);
+    }
+});
+const multer = Multer({
+    storage: storage,
+    limits: {fileSize: 15 * 1024 * 1024   }// no larger than 15mb
+});
+module.exports = {
+    multer
+};
+
+
 ```
