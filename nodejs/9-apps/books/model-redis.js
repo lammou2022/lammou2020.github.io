@@ -1,33 +1,19 @@
 'use strict';
 
-const mysql = require('mysql');
 const config = require('../config');
-const options = {
-    host: config.get('CLOUDSQL_HOST'),
-    user: config.get('CLOUDSQL_USER'),
-    password: config.get('CLOUDSQL_PASSWORD'),
-    database: config.get('CLOUDSQL_DATABASE'),
-};
-
-const pool = mysql.createPool(options);
+var reids=require("redis");
+var client=reids.createClient();
+const R_KEY="bookshelf"
 
 function list( userId , cb) {
-    pool.getConnection(function (err, connection) {
-        if(err){cb(err);return;}
-        // Use the connection
-        connection.query(
-            'SELECT * FROM `bookshelf` order by id DESC ',[],
-            (err, results) => {
-                if (err) {
-                    cb(err);
-                    return;
-                }
-                cb(null, results);
-                connection.release();
-            }
-        );
+    console.log("LIST");
+    client.hgetall(R_KEY,function(err,result){
+        if(err) cb(new Error('List ERROR'));
+        console.log(result);
+        return cb(null,result);
     });
 }
+
 function listMore( limit,  token, cb) {
     token = token ? parseInt(token, 10) : 0;
     pool.getConnection(function (err, connection) {
@@ -105,6 +91,7 @@ function read( id, cb) {
             });
     });
 }
+
 function update( id, data, cb) {
     pool.getConnection(function (err, connection) {
         if(err){cb(err);return;}
@@ -154,12 +141,35 @@ CREATE TABLE IF NOT EXISTS `bookshelf`.`books` (
 
 
 
-  'use strict';
-var reids=require("redis");
-var client=reids.createClient();
-const CloudTMS="CloudTMS"
-const CloudTMSStartDateTime="CloudTMSDateTime"
+ 
 
+function list( userId , cb) {
+    console.log("LIST");
+    client.hgetall("TMS",function(err,result){
+        if(err) cb(new Error('TMS List ERROR'));
+        console.log(result);
+        return cb(null,result);
+    });
+}
+
+
+function TMSQFlistbydate(sd,ed,cb) {
+    client.hgetall("TMS",function(err,result){
+        if(err) cb(new Error('TMS List ERROR'));
+        console.log(result);
+        return cb(null,result);
+    });
+ }
+
+ function AddTMSQF(fn,md,jsondata,username,cb){
+    let data={id:0,fn:fn,md:md,jsondata:jsondata,username:username};
+    console.log(data);
+    client.hset("TMS",fn,jsondata,function(err,result){
+        if(err) cb(new Error('TMS ADD ERROR'));
+        console.log(result);//return 1;
+        return cb(null,result);
+    });
+}
 function SaveDateTime(data,cb){
     client.hset(CloudTMS,CloudTMSStartDateTime,data,function(err,result){
         if(err) cb(new Error('ADD ERROR'));
@@ -183,29 +193,5 @@ module.exports = {
 };      
 
 /*
-function list( userId , cb) {
-    console.log("LIST");
-    client.hgetall("TMS",function(err,result){
-        if(err) cb(new Error('TMS List ERROR'));
-        console.log(result);
-        return cb(null,result);
-    });
-}
-function AddTMSQF(fn,md,jsondata,username,cb){
-    let data={id:0,fn:fn,md:md,jsondata:jsondata,username:username};
-    console.log(data);
-    client.hset("TMS",fn,jsondata,function(err,result){
-        if(err) cb(new Error('TMS ADD ERROR'));
-        console.log(result);//return 1;
-        return cb(null,result);
-    });
-}
 
-function TMSQFlistbydate(sd,ed,cb) {
-    client.hgetall("TMS",function(err,result){
-        if(err) cb(new Error('TMS List ERROR'));
-        console.log(result);
-        return cb(null,result);
-    });
- }
 */

@@ -1,6 +1,4 @@
 'use strict';
-
-'use strict';
 const config = require('../config');
 var sqlite3 = require('sqlite3').verbose()
 var db = new sqlite3.Database(config.get('SQLITE_PATH'))
@@ -56,7 +54,22 @@ function listMore(limit, token, cb) {
         })
     })
 }
+function SaveDateTime(data,cb){
+    client.hset(CloudTMS,CloudTMSStartDateTime,data,function(err,result){
+        if(err) cb(new Error('ADD ERROR'));
+        return cb(null,result);//result 1;
+    });
+}
 
+function ReadDateTime( cb) {
+    client.hget(CloudTMS,CloudTMSStartDateTime,function(err,result){
+        if(err){  //cb(new Error('TMS ' + id + ' does not exist'));
+            return cb(null,-1);    
+        } 
+        //let user=JSON.parse(result);
+        return cb(null,result);
+    });
+}
 
 function read(id, cb) {
     db.serialize(function ()  {
@@ -73,7 +86,6 @@ function read(id, cb) {
                     return;
                 }
                 cb(null, results[0]);
-                connection.release();
             });
     });
 }
@@ -86,35 +98,41 @@ function _delete(userid, id, cb) {
 }
 
 function create(data, cb) {
-    //console.log(data);
+    let f=[]
+        let v=[]
+        for(let prop in data){
+            f.push(`${prop}`)
+            v.push(data[prop])
+        }
     db.serialize(function () {
         var stmt = db.prepare('INSERT INTO bookshelf VALUES (?)')
         for (var i = 0; i < 10; i++) {
           stmt.run('Ipsum ' + i)
         }
-        db.query('INSERT INTO `bookshelf` SET ? ', [data], (err, res) => {
+        let stmt=db.query('INSERT INTO `bookshelf` ('+f.join(",")+') SET ? ', [v], (err) => {
             if (err) {
                 cb(err);
                 return;
             }
-            read(res.insertId, cb);
-            //read(res.insertId, cb);
-            //cb(null);
-            connection.release();
+            read(this.lastID, cb);
         });
     });
 }
 
 function update(id, data, cb) {
     db.serialize(function () {
-        db.run(
-            'UPDATE `bookshelf` SET ? WHERE `id` = ?  ', [data, id], (err) => {   //and `createdById` = ?
+        let f=[]
+        let v=[]
+        for(let prop in data){
+            f.push(`${prop}=?`)
+            v.push(data[prop])
+        }
+        db.run('UPDATE `bookshelf` SET '+f.join(",")+' WHERE `id` = ?  ', v.push(id), (err) => {   //and `createdById` = ?
                 if (err) {
                     cb(err);
                     return;
                 }
                 read(id, cb);
-                connection.release();
             });
     });
 }
