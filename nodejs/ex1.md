@@ -43,6 +43,7 @@ nconf
     'REDISHOST',
     'MYSQL_USER',
     'MYSQL_PASSWORD',
+    'SQLITE_PATH',
 
   ])
   // 3. Config file
@@ -58,6 +59,7 @@ nconf
     MYSQL_DB:'',
     MYSQL_USER:'',
     MYSQL_PASSWORD:'',
+    SQLITE_PATH:pwd()+'/bookshelf.db',
   });
 // Check for required settings
 
