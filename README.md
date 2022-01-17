@@ -140,6 +140,7 @@ JavaScript is a scripting language that enables you to create dynamically updati
 我第一個HTML
 
 文件結構
+
 ```text
 static\a.js
 static\a.css
@@ -191,7 +192,7 @@ HTML基本結構
 </pre>
 
 學習html標準標籤排版功能      
-A.標題字 h1..h4    
+A.標題字 h1..h6    
 B.段落 p, div      
 C.插入圖片 img     
 D.超連結 a     
