@@ -83,6 +83,39 @@ The Markdown Guide is a free and open-source reference guide that explains how t
 
 ## 一. Web 前端(html,css,js)
 
+可延伸標記式語言（英語：Extensible Markup Language，簡稱：XML）是一種標記式語言。XML是從標準通用標記式語言（SGML）中簡化修改出來的。它主要用到的有可延伸標記式語言、可延伸樣式語言（XSL）、XBRL和XPath等。     
+
+標記（Markup）與內容（content）    
+
+XML文件的字元分為標記（Markup）與內容（content）兩類。標記通常以&lt;開頭，以&gt;結尾；或者以字元& 開頭，以;結尾。不是標記的字元就是內容。    
+
+標籤（Tag）   
+
+<pre style="color:white;">
+start-tag，如&lt;section&gt;;
+end-tag，如  &lt;/section&gt;;
+empty-element tag，如&lt;line-break /&gt;.
+</pre>
+
+元素/內容（Element）    
+
+元素是文件邏輯組成，或者在start-tag與匹配的end-tag之間。    
+
+屬性（Attribute）    
+
+屬性是一種標記結構，在start-tag或empty-element tag內部的「名字-值對」。例如：&lt;img src="madonna.jpg" alt="Madonna" /&gt;。每個元素中，一個屬性最多出現一次，一個屬性只能有一個值。
+
+<pre style="color:white;">
+&lt;?xml version="1.0"?>
+  &lt;小纸条&gt;
+    &lt;收件人>大元&lt;/收件人&gt;
+    &lt;發件人>小張&lt;/發件人&gt;
+    &lt;主題>問候&lt;/主題&gt;
+    &lt;具體內容>早啊，飯吃了沒？ &lt;/具體內容&gt;
+  &lt;/小纸条&gt;
+</pre>
+
+HTML 是XML一個子集，且有固定語義。h1題標字、p段落等對應winword格式。    
 HTML 的出現有一個好漂亮的名稱， 相對text,word文本來說，叫做"超文本" , link "超連結"。網絡普及化之后，現在沒人再講了。   
 HTML 說明了因應互联網及瀏覽器出現，需要一種基於標籤(註XML) 的文本排版方式。   
 例:
@@ -136,17 +169,22 @@ index.md
     For more information . LinkTo http://www.macaodaily.com
 ```
 HTML基本結構      
-```html
-html
-    head
-        script.
-          //
-        style.
-          //
-    body
-        //
+<pre style="color:white;">
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;script&gt;
+          /*   */
+        &lt;/script&gt;
+        &lt;style&gt;
+          /*  */
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        /*   */
         內容
-```
+    &lt;/body&gt;
+&lt;/html&gt;    
+</pre>
 
 學習html標準標籤排版功能      
 A.標題字 h1..h4    
