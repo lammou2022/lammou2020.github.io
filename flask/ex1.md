@@ -6,8 +6,7 @@ https://cloud.google.com/appengine/docs/standard/nodejs/tutorials
 
 https://cloud.google.com/python/docs/getting-started
 
-![](https://cloud.google.com/languages/images/bookshelf-homepage.png
-)
+![](https://cloud.google.com/languages/images/bookshelf-homepage.png)
 
 ![](https://cloud.google.com/languages/images/bookshelf-add-book.png)
 
@@ -144,6 +143,19 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
             </form>
             </div>
         '''
+
+
+    import io
+    from flask import send_file
+    from openpyxl.workbook import Workbook
+    @app.route("/download/<int:id>")
+    def file_download(id):
+        wb = Workbook()
+        # Add sheets and data to the workbook here.
+        file = io.BytesIO()
+        wb.save(file)
+        file.seek(0)
+        return send_file(file, attachment_filename=f"{id}.xlsx", as_attachment=True)
 
 
     # Register the Assets CRUD blueprint.
