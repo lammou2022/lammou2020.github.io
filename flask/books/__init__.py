@@ -1,7 +1,7 @@
 import json
 import logging
 from functools import wraps
-from flask import current_app, Flask, redirect, request, session, url_for
+from flask import current_app, Flask, redirect, request, session, url_for, send_file
 import httplib2
 import redis  
 from flask_session import Session
@@ -60,7 +60,7 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
     import io
     from flask import send_file
     from openpyxl.workbook import Workbook
-    @app.route("/download/<int:id>")
+    @app.route("/downloadXls/<int:id>")
     def file_download(id):
         wb = Workbook()
         # Add sheets and data to the workbook here.
