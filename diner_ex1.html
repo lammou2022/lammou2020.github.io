@@ -1,6 +1,31 @@
 <html>
 <head>
 <style>
+  .strobe {
+  transform-origin: bottom;
+  animation: strobeStart .5s ease-out, strobe 1s infinite;
+  animation-delay: 0s, .5s;
+}
+
+@keyframes strobeStart {
+  0% {
+    transform:  skew(0deg,0deg) scaleY(1) ;
+    animation-timing-function: ease-in;
+   }
+  40% {
+    transform:  skew(0deg,0deg) scaleY(.9);
+    animation-timing-function: ease-out;
+  }
+  100% { transform:   skew(4deg,0deg) scaleX(1); }
+}
+
+@keyframes strobe {
+  0% { transform:   skew(4deg,0deg) scaleX(1); }
+  10% { transform:  skew(1deg,0deg) scaleY(.9) ; }
+  50% { transform:  skew(-4deg,0deg) scaleX(1); }
+  60% { transform:  skew(-1deg,0deg) scaleY(.9) ; }
+  100% {transform: skew(4deg,0deg) scaleX(1); }
+}
 orange,apple {
   -webkit-border-radius: 100px;
   border-radius: 100px;
@@ -41,7 +66,7 @@ orange,apple,pickle {
 </style>
 </head>
 <body>
-<pickle></pickle>
+<pickle class="strobe"></pickle>
 <orange></orange>
 <apple></apple>
 </body>
