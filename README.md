@@ -101,9 +101,13 @@ empty-element tag，如&lt;line-break /&gt;.
 
 元素是文件邏輯組成，或者在start-tag與匹配的end-tag之間。    
 
-屬性（Attribute）    
+屬性（Attribute）             
 
-屬性是一種標記結構，在start-tag或empty-element tag內部的「名字-值對」。例如：&lt;img src="madonna.jpg" alt="Madonna" /&gt;。每個元素中，一個屬性最多出現一次，一個屬性只能有一個值。常用id,class,style; img(src=x.png), a(href=link)       
+屬性是一種標記結構，在start-tag或empty-element tag內部的「名字-值對」。以HTML為例, 如：&lt;img src="madonna.jpg" alt="Madonna" /&gt;。每個元素中，一個屬性最多出現一次，一個屬性只能有一個值。
+
+常用屬性id, class, style;    
+
+必要屬性例如: img(src=x.png), a(href=link);           
 
 <pre style="color:white;">
 &lt;?xml version="1.0"?>
@@ -121,7 +125,6 @@ HTML 的出現有一個好漂亮的名稱， 相對text,word文本來說，叫�
 例:都想像MS Word排版    
 標題:&lt;h1&gt; 表示標題開始，結束。 H1,H2,H3,H4,H5,H6 &lt;/h1&gt;         
 段落:&lt;p&gt; 表示段落開始，結束。  &lt;/p&gt;    
-
 
 
 [Hypertext Markup Language (HTML-01) June 1993](https://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt)
