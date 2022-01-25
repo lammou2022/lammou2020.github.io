@@ -145,19 +145,6 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
         '''
 
 
-    import io
-    from flask import send_file
-    from openpyxl.workbook import Workbook
-    @app.route("/download/<int:id>")
-    def file_download(id):
-        wb = Workbook()
-        # Add sheets and data to the workbook here.
-        file = io.BytesIO()
-        wb.save(file)
-        file.seek(0)
-        return send_file(file, attachment_filename=f"{id}.xlsx", as_attachment=True)
-
-
     # Register the Assets CRUD blueprint.
     from .crud import crud
     app.register_blueprint(crud, url_prefix='/assets')

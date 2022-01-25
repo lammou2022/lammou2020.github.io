@@ -15,21 +15,19 @@
 
 ## Git/GitHub 源碼版本管理
 
-網頁存於在github.io, 是github提供的功能!  
+網頁存放Github, Github提供的功能Git Page, 使用 <user>.github.io 作為個人入口網站!  
 
 ![](static/git_github.png)   
-
 
 學習推薦     
 👍[生產力Git課程](https://github.com/makzan/beginning-git-version-control)    
 👍[Github QuickStart](https://docs.github.com/en/get-started/quickstart/hello-world)
 
+Git 開源免費源碼版本管理系統。
 
-簡單說明關係!   
-GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-源碼版本管理及恊作遠端雲平台，讓你同其人也一齊恊助完成項目(不限地點)。
+GitHub 源碼版本管理及遠端恊作的雲平台，讓你同其人也一齊恊助完成項目(不限地點)。   
 
-Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.(free and open source)源碼版本管理系統。
+聽聞已是入職的必備技能!   
 
 ![](https://git-scm.com/book/en/v2/images/distributed.png)   
 
@@ -37,7 +35,7 @@ Git is a free and open source distributed version control system designed to han
 
 1. [安裝Git](https://git-scm.com/download/win)   
 
-2. [註冊GitHub](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)  
+2. [註冊GitHub](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)   
 假設:  
 註冊Email: tigeryear2022@gmail.com   
 註冊用戶: tigeryear2022    
@@ -105,7 +103,7 @@ empty-element tag，如&lt;line-break /&gt;.
 
 屬性（Attribute）    
 
-屬性是一種標記結構，在start-tag或empty-element tag內部的「名字-值對」。例如：&lt;img src="madonna.jpg" alt="Madonna" /&gt;。每個元素中，一個屬性最多出現一次，一個屬性只能有一個值。
+屬性是一種標記結構，在start-tag或empty-element tag內部的「名字-值對」。例如：&lt;img src="madonna.jpg" alt="Madonna" /&gt;。每個元素中，一個屬性最多出現一次，一個屬性只能有一個值。常用id,class,style; img(src=x.png), a(href=link)       
 
 <pre style="color:white;">
 &lt;?xml version="1.0"?>
@@ -122,7 +120,8 @@ HTML 的出現有一個好漂亮的名稱， 相對text,word文本來說，叫�
 
 例:都想像MS Word排版    
 標題:&lt;h1&gt; 表示標題開始，結束。 H1,H2,H3,H4,H5,H6 &lt;/h1&gt;         
-段落:&lt;p&gt; 表示段落開始，結束。  &lt;/p&gt;          
+段落:&lt;p&gt; 表示段落開始，結束。  &lt;/p&gt;    
+
 
 
 [Hypertext Markup Language (HTML-01) June 1993](https://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt)
@@ -150,6 +149,7 @@ index.md
 ```
 
 我要書寫內容:
+
 ```text
     粵華南虎誕孖仔祝元旦
     
@@ -233,6 +233,8 @@ E.code pre
 &lt;/html&gt;
 </pre>
 
+ CSS 入门
+
 <p>
 			   The <code>class</code> attribute on the
 			   paragraph's start tag (&#x201C;&lt;p&gt;&#x201D;) can be
@@ -248,18 +250,106 @@ p.moreinfo { font-style: italic }
 有些段落特別顯示斜體。  
 moreinfo 類的段落p 內部所有內容使用 font-style: italic 斜體字.   
 
-CSS 選擇方式, 顯示模式   
-tag {}   
-.class_name 或 tag.class_name {}        
-#id_name {}    
-xpath {}    
+CSS 选择器      
 
-ex:   
-這里寫css清楚目標tag class id 來改變顯示字樣或圖型等效果。
-對分析網頁結構，尋找目標內容自動分析數據，及自動填表等功能有好大幫助。        
-有個css選擇器練習。高手可以試下。          
+<table>
+<thead>
+<tr>
+<th><strong>选择器</strong></th>
+<th><strong>名称</strong></th>
+<th><strong>说明</strong></th>
+<th><strong>CSS 版本</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td>通用选择器</td>
+<td>选择所有元素</td>
+<td>2</td>
+</tr>
+<tr>
+<td>&lt;type&gt;</td>
+<td>元素选择器</td>
+<td>选择指定类型的元素</td>
+<td>1</td>
+</tr>
+<tr>
+<td>#&lt;id&gt;</td>
+<td>id 选择器</td>
+<td>选择指定 id 属性的元素</td>
+<td>1</td>
+</tr>
+<tr>
+<td>.&lt;class&gt;</td>
+<td>class 选择器</td>
+<td>选择指定 class 属性的元素</td>
+<td>1</td>
+</tr>
+<tr>
+<td>[attr]系列</td>
+<td>属性选择器</td>
+<td>选择指定 attr 属性的元素</td>
+<td>2 ~ 3</td>
+</tr>
+<tr>
+<td>s1,s2,s3…</td>
+<td>分组选择器</td>
+<td>选择多个选择器的元素</td>
+<td>1</td>
+</tr>
+<tr>
+<td>s1 s2</td>
+<td>后代选择器</td>
+<td>选择指定选择器的后代元素</td>
+<td>1</td>
+</tr>
+<tr>
+<td>s1 &gt; s2</td>
+<td>子选择器</td>
+<td>选择指定选择器的子元素</td>
+<td>2</td>
+</tr>
+<tr>
+<td>s1 + s2</td>
+<td>相邻兄弟选择器</td>
+<td>选择指定选择器相邻的元素</td>
+<td>2</td>
+</tr>
+<tr>
+<td>s1 ~ s2</td>
+<td>普通兄弟选择器</td>
+<td>选择指定选择器后面的元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>::first-line</td>
+<td>伪元素选择器</td>
+<td>选择块级元素文本的首行</td>
+<td>1</td>
+</tr>
+<tr>
+<td>::first-letter</td>
+<td>伪元素选择器</td>
+<td>选择块级元素文本的首字母</td>
+<td>1</td>
+</tr>
+<tr>
+<td>::before</td>
+<td>伪元素选择器</td>
+<td>选择元素之前插入内容</td>
+<td>2</td>
+</tr>
+<tr>
+<td>::after</td>
+<td>伪元素选择器</td>
+<td>选择元素之后插入内容</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>  
 
-<h3>css Selector </h3>
+css選擇器練習。高手可以試下。          
 
 [diner](https://flukeout.github.io/)   
 [題目](diner.html)     
@@ -268,8 +358,7 @@ ex:
 
 [ex1 簡化版](diner_ex1.html)      
 
-已定義h1、 p、 div等等。   
-自定義apple oragne pickle CSS樣式        
+已定義標籤h1、 p、 div和非標準CSS樣式自定標籤 apple oragne pickle 的實作。             
 
 <pre style="color:white;">
 &lt;html&gt;
@@ -1049,6 +1138,10 @@ def updateItem_DataSet(data):
 回顧，學習程式設計這門課的時候，理論算法很多。導師還是提供了實戰機會，數學基礎，職業技能，軟件技術趋向，英語技能，前沿性，當時沒懂。
 
 我想寫總結一下Web前端和Python后端的技能，還有SampleCode實作分享! 努力寫作中! 耐心等待....
+
+參考 
+
+[Learn web development](https://developer.mozilla.org/en-US/docs/Learn)
 
 我的[日記diary](diary.html)
 
