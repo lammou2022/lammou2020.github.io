@@ -270,7 +270,7 @@ p.moreinfo { font-style: italic }
 &lt;/style&gt;
 </pre>
 
-method 3   
+method 3  style.css
 ```css
 p.moreinfo { font-style: italic }
 ```   
@@ -400,7 +400,9 @@ css選擇器練習。高手可以試下。
 
 [ex1 簡化版](diner_ex1.html)      
 
-已定義標籤h1、 p、 div和非標準CSS樣式自定標籤 apple oragne pickle 的實作。             
+已定義標籤h1、 p、 div和非標準CSS樣式自定標籤 apple oragne pickle 的實作。   
+
+style.css   
 
 ```css
 orange,apple {
@@ -438,6 +440,8 @@ orange,apple,pickle {
   height: 60px;
 }
 ```
+
+ex1.html
 
 <pre style="color:white;">
 &lt;html&gt;
