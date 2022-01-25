@@ -233,7 +233,14 @@ E.code pre
 &lt;/html&gt;
 </pre>
 
- CSS 入门
+CSS 入门
+
+学习要点：
+
+1.使用 CSS
+
+有些段落特別顯示斜體。  
+moreinfo 類的段落p 內部所有內容使用 font-style: italic 斜體字.   
 
 <p>
 			   The <code>class</code> attribute on the
@@ -244,11 +251,46 @@ E.code pre
 			   could write, in CSS:
 </p>
 
+2.三种方式
+
+method 1  
+
 <pre style="color:white;">
-p.moreinfo { font-style: italic }
+&lt;style&gt;
+&lt;p style="font-style: italic"&gt;....&lt;/p&gt;
+&lt;/style&gt;
 </pre>
-有些段落特別顯示斜體。  
-moreinfo 類的段落p 內部所有內容使用 font-style: italic 斜體字.   
+
+
+
+method 2   
+<pre style="color:white;">
+&lt;style&gt;
+p.moreinfo { font-style: italic }
+&lt;/style&gt;
+</pre>
+
+method 3   
+```css
+p.moreinfo { font-style: italic }
+```   
+<pre style="color:white;">
+&lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
+</pre>
+
+
+3.层叠和继承
+
+样式表层叠通过五种方式进行，如果样式相同，那么比如会产生冲突替换。这时，它的优先级顺序就显的比较重要。以下优先级从低到高：
+
+(1).浏览器样式（元素自身携带的样式）；
+
+(2).外部引入样式（使用<link>引入的样式）；
+
+(3).文档内嵌样式（使用<style>元素设置）；
+
+(4).元素内嵌样式（使用 style 属性设置）。
+
 
 CSS 选择器      
 
@@ -360,10 +402,7 @@ css選擇器練習。高手可以試下。
 
 已定義標籤h1、 p、 div和非標準CSS樣式自定標籤 apple oragne pickle 的實作。             
 
-<pre style="color:white;">
-&lt;html&gt;
-&lt;head&gt;
-&lt;style&gt;
+```css
 orange,apple {
   -webkit-border-radius: 100px;
   border-radius: 100px;
@@ -374,17 +413,14 @@ orange,apple {
   position: relative;
   margin: 20px 10px;
 }
-
 apple {
   background: #e41919;
   border-color: #ab1212;
 }
-
 orange {
   background: orange;
   border-color: #bd6e07;
 }
-
 pickle {
   background: #179837;
   width: 25px;
@@ -401,6 +437,14 @@ orange,apple,pickle {
   margin: 0 10px;
   height: 60px;
 }
+```
+
+<pre style="color:white;">
+&lt;html&gt;
+&lt;head&gt;
+&lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
+&lt;style&gt;
+/*style.css內容内嵌這里也是可以的。 */
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
