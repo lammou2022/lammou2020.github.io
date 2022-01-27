@@ -516,7 +516,7 @@ https://www.bookstack.cn/books/front-end-database
 [AJAX內容](https://www.w3schools.com/js/js_ajax_intro.asp)    
 [JSON內容](https://www.w3schools.com/js/js_json_intro.asp)    
 
-### 進階應用jQuery及UI
+### Web Framework 應用(jQuery、UI、Bootstrap)
 
 jQuery是一套跨瀏覽器的JavaScript函式庫，用於簡化HTML與JavaScript之間的操作。
 [You Don't Need jQuery中文版](https://www.bookstack.cn/read/You-Dont-Need-jQuery/ch8.md)
@@ -533,7 +533,13 @@ $.get( "static/a.json", function( data ) {
 &lt;/script&gt;
 </pre>
 
-### Bootstrap
+UI	
+
+	
+model dialog
+	
+	
+Bootstrap
 
 自適應網頁設計(Responsive web design)，網頁自適應不同設備如, 電腦、手機、平板等設備Monitor尺寸。
 
@@ -544,8 +550,7 @@ $.get( "static/a.json", function( data ) {
 python效能是相對的,對我們普通人來,速快足够快!     
 易用性，還有Node JS。Go/Rust更具未來性，有餘力可以努力加油!       
 ![ease of use python](static/rust_lang.png)    
-推薦👍[生產力Python課程](https://github.com/makzan/Beginning-Python-Course)
-
+	
 [安裝python 3.9.9 模組管理程式pip ](https://www.python.org/downloads/windows/)
 ```cmd
 Python 3.9.9 - Nov. 15, 2021
@@ -553,6 +558,21 @@ Note that Python 3.9.9 cannot be used on Windows 7 or earlier.
 Download Windows installer (64-bit)
 ```
 
+![](static/python_01.png)   
+![](static/python_02.png)   
+![](static/python_03.png)   
+![](static/python_04.png)   
+![](static/python_05.png)   
+![](static/python_06.png)   
+![](static/python_07.png)   
+![](static/python_08.png)   
+![](static/python_09.png)   
+![](static/python_10.png)   
+	
+	
+推薦👍[生產力Python課程](https://github.com/makzan/Beginning-Python-Course)
+
+	
 ## 三. 資料庫MySQL/SQLite,Redis     
 
 ![](static/database_category.png)     
