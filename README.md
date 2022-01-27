@@ -6,8 +6,9 @@
 
 綜述個人對網站編程技能總結，寫一些最簡單用法，同學們分享。不足之處，請多指教!
 
+## Internet / Routes / TCP/IP / DNS 
 
-## An overview of HTTP
+## An overview of HTTP / req and res /
 
 ![](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/fetching_a_page.png)  
 
