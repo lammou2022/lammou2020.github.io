@@ -467,6 +467,13 @@ ex1.html
 &lt;/html&gt;
 </pre>
 
+
+Web Design Framework (Bootstrap)
+
+自適應網頁設計(Responsive web design)，網頁自適應不同設備如, 電腦、手機、平板等設備Monitor尺寸。
+
+[Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/)   
+	
 參考youtube電腦課程CS50      
 [cs50 2020](https://www.youtube.com/watch?v=YoXxevp1WRQ&list=PLhQjrBD2T382_R182iC2gNZI9HzWFMC_8)      
 [cs50 html css javascript](https://www.youtube.com/watch?v=Pawk7o9Tsds)     
@@ -516,7 +523,7 @@ https://www.bookstack.cn/books/front-end-database
 [AJAX內容](https://www.w3schools.com/js/js_ajax_intro.asp)    
 [JSON內容](https://www.w3schools.com/js/js_json_intro.asp)    
 
-### Web Framework 應用(jQuery、UI、Bootstrap)
+### JS Framework 應用(jQuery、UI)
 
 jQuery是一套跨瀏覽器的JavaScript函式庫，用於簡化HTML與JavaScript之間的操作。
 [You Don't Need jQuery中文版](https://www.bookstack.cn/read/You-Dont-Need-jQuery/ch8.md)
@@ -539,11 +546,6 @@ UI
 model dialog
 	
 	
-Bootstrap
-
-自適應網頁設計(Responsive web design)，網頁自適應不同設備如, 電腦、手機、平板等設備Monitor尺寸。
-
-[Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/)   
 
 ## 二.  Python 易學易用
 從下圖看出易學易用。最適合快速上手的人士!講求正確,不求速度。  
