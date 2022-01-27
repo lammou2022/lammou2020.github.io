@@ -295,8 +295,13 @@ p.moreinfo { font-style: italic }
 (4).元素内嵌样式（使用 style 属性设置）。
 
 
-CSS 选择器      
+CSS 选择器    
 
+Type selector   
+.Class selector   
+#ID selector   
+Atrribute selector   
+	
 <table>
 <thead>
 <tr>
@@ -475,6 +480,18 @@ https://www.bookstack.cn/read/liyanhui-html-css/0.md
 ### JavaScript
 
 基礎JS(variable, if, loop, function )         
+	
+!()[static/JAVASCRIPT_01.png]  
+!()[static/JAVASCRIPT_02.png]   
+!()[static/JAVASCRIPT_03.png]  
+!()[static/JAVASCRIPT_04.png]   
+!()[static/JAVASCRIPT_05.png]  
+!()[static/JAVASCRIPT_06.png]   
+!()[static/JAVASCRIPT_07.png]  
+!()[static/JAVASCRIPT_08.png]   
+!()[static/JAVASCRIPT_09.png]   
+!()[static/JAVASCRIPT_10.png]   
+!()[static/JAVASCRIPT_10_dom.png]   
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources
 
