@@ -6,9 +6,9 @@
 
 綜述個人對網站編程技能總結，寫一些最簡單用法，同學們分享。不足之處，請多指教!
 
-## Internet / Routes / TCP/IP / DNS 
+## Internet、Routes、TCP/IP、DNS 
 
-## An overview of HTTP / req and res /
+## HTTP 、 req and res
 
 ![](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/fetching_a_page.png)  
 
@@ -524,7 +524,7 @@ https://www.bookstack.cn/books/front-end-database
 [AJAX內容](https://www.w3schools.com/js/js_ajax_intro.asp)    
 [JSON內容](https://www.w3schools.com/js/js_json_intro.asp)    
 
-### JS Framework 應用(jQuery、UI)
+### JS Framework(jQuery)
 
 jQuery是一套跨瀏覽器的JavaScript函式庫，用於簡化HTML與JavaScript之間的操作。
 [You Don't Need jQuery中文版](https://www.bookstack.cn/read/You-Dont-Need-jQuery/ch8.md)
