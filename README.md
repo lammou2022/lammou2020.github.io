@@ -178,19 +178,29 @@ index.md
     For more information . LinkTo http://www.macaodaily.com
 ```
 HTML基本結構      
+	
+![](static/JAVASCRIPT_10_dom.png)  
+	
 <pre style="color:white;">
 &lt;html&gt;
     &lt;head&gt;
+        &lt;script src=main.js&gt;&lt;/script&gt; 
+	&lt;!-- 外部引入JAVASCRIPT js file  --&gt;
         &lt;script&gt;
-          /*   */
+          /* 內嵌JAVASCRIPT  */
         &lt;/script&gt;
+	&lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
+	&lt;!-- 外部引入 style.css file --&gt;
         &lt;style&gt;
-          /*  */
+          /* 內嵌css */
         &lt;/style&gt;
     &lt;/head&gt;
     &lt;body&gt;
         /*   */
         內容
+        &lt;script&gt;
+        /* 內嵌JAVASCRIPT  */
+        &lt;/script&gt;
     &lt;/body&gt;
 &lt;/html&gt;    
 </pre>
