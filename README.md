@@ -512,6 +512,9 @@ https://www.bookstack.cn/read/liyanhui-html-css/0.md
 ![](static/JAVASCRIPT_10_dom.png)  
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources
+	
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide
+
 
 [廖雪峰 JavaScript 教程（202007）](https://www.bookstack.cn/read/liaoxuefeng-JavaScript-2020/cc19bec7412798fa.md) 
 
