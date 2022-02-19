@@ -3,6 +3,27 @@
 🐧   :   大舊,有沒認識docker東東!    
 
 🐻‍❄️:   阿尖🐧, docker 好大坑, 需要有人引航!     
+🐻‍❄️:   阿尖🐧,Python数学建模,使用工具有哪些?
+🐧   :   參考網友總結如下:
+
+- 科学计算基础库： Numpy
+- 高级科学计算库： SciPy
+- 非常好用的数据处理库： Pandas
+- 大部分人用起来很丑的基础绘图库： Matplotlib
+- 还挺好用的符号计算库： SymPy
+- 简单图像处理库： Pillow
+還有沒有用的
+- 与Python科学计算生态完美融合的概率统计库： Statsmodels
+- 高级绘图库： Seaborn
+- 机器学习库： SKlearn
+- 成熟的网络科学库： NetworkX
+- 谷狗的通用运筹学工具： ortools
+- 专用凸优化求解器： CVXPY（一般也用不上）
+- 还想要做复杂的图像处理： Opencv-python
+- 如果真的想用深度学习的话： PyTorch
+- 小波变换库： PyWavelets
+
+[python建模](mathmodeling/index.ipynb)
 
 ## 前言
 
