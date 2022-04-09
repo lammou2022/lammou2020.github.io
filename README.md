@@ -1,10 +1,23 @@
 # 網頁設計及應用-入門
 
-🐧   :   大舊,有沒認識docker東東!    
+🐧 colab 學Python
+- [lesson-1-Defining-Variables-and-List](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_ex1/Lesson-1-Defining-Variables-and-List.ipynb)
+- [lesson-2-Collection](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_ex1/Lesson-2-Collection.ipynb)
+- [lesson-2b-logic-flow](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_ex1/Lesson-2b-logic-flow.ipynb)
+- [lesson-3A-More-on-Collection](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_ex1/Lesson-3A-More-on-Collection.ipynb)
+- [lesson-3B-Reading-and-Writing-TextFile](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_ex1/Lesson-3B-Reading-and-Writing-TextFile.ipynb)
+- [lesson-4-divede-and-conquer](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_ex1/Lesson-4.ipynb)
+- [lesson-5-url-api](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_ex1/Lesson-5.ipynb)
+- [lesson-6-web-scraping](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_ex1/Lesson-6.ipynb)
+- [lesson-7-web-automation](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_ex1/Lesson-7.ipynb)
+- [lesson-8-numpy-pandas](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_ex1/Lesson-8b-pandas.ipynb)
+- [lesson-8-numpy-pandas](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_ex1/Lesson-8-numpy.ipynb)
+- [lesson-9-plotting-graph](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_ex1/Lesson-9-matplotlib.ipynb)
 
-🐻‍❄️:   阿尖🐧, docker 好大坑, 需要有人引航!     
-🐻‍❄️:   阿尖🐧,Python数学建模,使用工具有哪些?
-🐧   :   參考網友總結如下:
+
+
+🐻:   阿尖🐧,Python数学建模,使用工具有哪些?
+🐧:   參考網友總結如下:
 
 - 科学计算基础库： Numpy
 - 高级科学计算库： SciPy
