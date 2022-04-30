@@ -1,5 +1,9 @@
 # 網頁設計及應用-入門
 
+🐧 python 學代數
+- [lesson-1-Sympy-simpify-expand-factor-solve](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_sci1/TM01_Sympy.ipynb)
+
+
 🐧 colab 學Python
 - [lesson-1-Defining-Variables-and-List](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_ex1/Lesson-1-Defining-Variables-and-List.ipynb)
 - [lesson-2-Collection](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_ex1/Lesson-2-Collection.ipynb)
