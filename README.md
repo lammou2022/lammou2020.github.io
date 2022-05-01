@@ -1,7 +1,10 @@
 # 網頁設計及應用-入門
 
 🐧 python 學代數
-- [lesson-1-Sympy-simpify-expand-factor-solve](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_sci1/TM01_Sympy.ipynb)
+- [lesson-1-Sympy基本功能-simpify-expand-factor-solve](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_sci1/TM01_Sympy.ipynb)
+- [lesson-2-Sympy微積分-Calculus](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_sci1/TM02_Sympy.ipynb)
+- [lesson-3-Sympy解方程-Solvers](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_sci1/TM03_Sympy.ipynb)
+- [lesson-4-Sympy進階-Advanced](https://colab.research.google.com/github/lammou2020/lammou2020.github.io/blob/main/py_sci1/TM04_Sympy.ipynb)
 
 
 🐧 colab 學Python
